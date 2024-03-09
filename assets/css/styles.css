@@ -112,8 +112,8 @@ ol {
 }
 
 img {
-    max-width: 100%;
-    height: 100%;
+    width: 100%;
+    height: auto;
 }
 
 button {
@@ -165,17 +165,12 @@ button {
     height: 74px;
     column-gap: 10px;
     align-items: center;
-
 }
 
 .header__logo {
     height: 80%;
     overflow: hidden;
 }
-
-.header__logo img {}
-
-
 
 .btn__menu {
     font-size: var(--big-size);
@@ -184,8 +179,6 @@ button {
     min-height: 1.5em;
     min-width: 1.5em;
     transition: 0.3s ease-in-out;
-
-
 }
 
 .btn__menu:hover {
@@ -306,6 +299,30 @@ button {
     padding: 20px 30PX;
 }
 
+/*>>==> TECNOLOGÍAS <==<< */
+.card__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-evenly;
+    padding: 20px;
+
+}
+
+.tecnologias__card {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7px;
+}
+
+.tecnologias__card span {
+    font-size: var(--normal-size);
+    font-weight: var(--medium-weight);
+}
+
+
 /*>>==> FOOTER <==<< */
 .footer {
     width: 100%;
@@ -317,8 +334,6 @@ button {
     flex-direction: column;
     border-bottom: 1px solid var(--enf-color);
     justify-content: space-between;
-    align-items: ;
-    /* row-gap: .2em; */
     padding: 1.9em;
     row-gap: 1em;
 }
@@ -406,6 +421,8 @@ button {
     color: var(--white-color);
     text-align: center;
 }
+
+
 
 .footer__copy {
     display: flex;
