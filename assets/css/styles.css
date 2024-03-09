@@ -315,7 +315,7 @@ button {
 .footer__content {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid var(--enf-color);
     justify-content: space-between;
     align-items: ;
     /* row-gap: .2em; */
@@ -395,17 +395,26 @@ button {
 }
 
 .btn__subscribe {
-    width: 50%;
-    padding: .5em 1em;
-    margin: .3em auto .3em;
+    width: 30%;
+    padding: .4em .3em;
+    margin: 1em auto .2em;
     border: 1px solid transparent;
     border-radius: 10px;
     background-color: var(--primary-color);
-    font-weight: var(--normal-weight);
-    font-size: var(--medium-size);
+    font-weight: var(--tiny-weight);
+    font-size: var(--small-size);
     color: var(--white-color);
+    text-align: center;
 }
 
 .footer__copy {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.footer__copy span {
+    font-size: var(--small-size);
+
 }
