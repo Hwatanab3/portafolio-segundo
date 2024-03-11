@@ -11,6 +11,7 @@
     --alt-color: hsl(194, 28%, 44%);
     --bg-color: hsl(356, 12%, 22%);
     --white-color: hsl(0, 0%, 100%);
+    --unselect-color: hsl(0, 0%, 55%);
 
     /*>>==> FONTS USADAS <==<< */
     --body-font: 'DM Mono';
@@ -116,7 +117,8 @@ img {
     height: auto;
 }
 
-button {
+button,
+.btn {
     border: none;
     outline: none;
     background-color: transparent;
@@ -124,6 +126,21 @@ button {
     cursor: pointer;
     color: var(--text-color);
 }
+
+input,
+textarea {
+    border: none;
+    outline: none;
+    background-color: var(--body-color);
+    user-select: none;
+    color: var(--text-color);
+}
+
+input:-internal-autofill-selected {
+    background-color: -internal-light-dark(var(--bg-color), rgba(255, 255, 255, 0)) !important;
+    ;
+}
+
 
 /*>>==> GLOBAL SET (UTILITY) <==<< */
 
@@ -136,6 +153,29 @@ button {
     max-width: 1024px;
     margin: 0 auto;
 }
+
+.btn--primary {
+    width: 9em;
+    padding: .4em .3em;
+    margin: 1em auto .2em;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    font-weight: var(--tiny-weight);
+    font-size: var(--small-size);
+    color: var(--white-color);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.btn--primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    font-weight: var(--bold-weight);
+    border-color: var(--primary-color);
+    border-width: 2.5px;
+}
+
 
 
 /*>>==> HEADER <==<< */
@@ -299,29 +339,103 @@ button {
     padding: 20px 30PX;
 }
 
+/*>>==> SOBRE MI <==<< */
+
+.sobremi__content h2 {
+    text-align: center;
+
+}
+
+.sobremi__content span {
+    padding: 10px 15px;
+}
+
+
+
 /*>>==> TECNOLOGÍAS <==<< */
+.tecnologias__content {
+    text-align: center;
+}
+
 .card__container {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 20px;
 
 }
 
 .tecnologias__card {
     width: 100px;
+    height: 150px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
     row-gap: 7px;
+    background-color: var(--enf-color);
+    padding: 10px;
+    border-radius: 10px;
 }
 
+
+
 .tecnologias__card span {
-    font-size: var(--normal-size);
+    font-size: var(--small-size);
+    font-weight: var(--medium-weight);
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid var(--body-color);
+}
+
+/*>>==> CONTACTO <==<< */
+
+.contacto__content {
+    row-gap: 1.5em;
+    width: 95%;
+}
+
+.privacity {
+    font-size: var(--small-size);
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto input {
+    border-bottom: 1px solid var(--unselect-color);
+    line-height: 2;
+    height: 50px;
     font-weight: var(--medium-weight);
 }
 
+.contacto input:focus {
+    color: var(--text-color);
+    border-bottom: 2.5px solid var(--text-color);
+    background-color: transparent;
+}
+
+.contacto textarea {
+    border-bottom: 1px solid var(--unselect-color);
+    line-height: 2;
+    font-weight: var(--medium-weight);
+    resize: none;
+}
+
+.contacto textarea:focus {
+    color: var(--text-color);
+    border-bottom: 2.5px solid var(--text-color);
+    background-color: transparent;
+}
+
+.contacto input::placeholder,
+textarea::placeholder {
+    color: var(--unselect-color);
+}
+
+.contacto input:focus::placeholder,
+textarea:focus::placeholder {
+    color: var(--text-color);
+}
 
 /*>>==> FOOTER <==<< */
 .footer {
@@ -334,8 +448,9 @@ button {
     flex-direction: column;
     border-bottom: 1px solid var(--enf-color);
     justify-content: space-between;
-    padding: 1.9em;
-    row-gap: 1em;
+    padding: var(--sp-3);
+    row-gap: var(--sp-2);
+
 }
 
 .footer__redes,
@@ -350,18 +465,16 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: var(--sp-0-5);
 }
 
-.footer__firma {
-    height: 100px;
-}
+.footer__firma {}
 
 .footer__icon {
     display: flex;
     align-items: center;
-    column-gap: 10px;
+    column-gap: var(--sp-1);
     font-size: 2.5rem;
-
 }
 
 .footer__icon a {
@@ -380,7 +493,11 @@ button {
     color: var(--white-color);
 }
 
-.contact__title {
+.footer__contact {
+    row-gap: var(--sp-0-5);
+}
+
+.footer__title {
     font-weight: var(--medium-weight);
     font-size: var(--normal-size);
 }
@@ -390,36 +507,34 @@ button {
     font-size: var(--small-size);
 }
 
-.contact__content {
+.footer__text {
     font-size: var(--small-size);
 }
 
-.subscribe__title {
-    font-weight: var(--medium-weight);
+.footer__subscribe {
+    row-gap: var(--sp-0-5);
+}
+
+.footer__subscribe input {
+    width: 99%;
     font-size: var(--normal-size);
+    border-bottom: 1px solid var(--unselect-color);
+    line-height: 2;
+    font-weight: var(--medium-weight);
 }
 
-.subscribe__content {
-    font-size: var(--small-size);
+.footer__subscribe input:focus {
+    /* color: var(--text-color); */
+    border-bottom: 2.5px solid var(--text-color);
+    background-color: transparent;
 }
 
-.footer__subscribe textarea {
-    resize: none;
-    width: 100%;
-    font-size: var(--small-size);
+.footer__subscribe input::placeholder {
+    color: var(--unselect-color);
 }
 
-.btn__subscribe {
-    width: 30%;
-    padding: .4em .3em;
-    margin: 1em auto .2em;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    background-color: var(--primary-color);
-    font-weight: var(--tiny-weight);
-    font-size: var(--small-size);
-    color: var(--white-color);
-    text-align: center;
+.footer__subscribe input:focus::placeholder {
+    color: var(--text-color);
 }
 
 

@@ -73,17 +73,16 @@
         <div class="container">
             <div class="sobremi__content">
                 <h2>SOBRE MI</h2>
-                <span>hola, soy Hiroshi Watanabe pero prefiero que me llamen Hiro. Estudie Arquitectura y, después de un
-                    tiempo haciendo modelado y renderizado 3D, me pasé al mundo de la Programación. Desde entonces
-                    disfruto creando experiencias web para los usuarios.</span>
+                <span>Soy Arquitecto y, después modelar y renderizar por un tiempo, me pasé al mundo de la PROGRAMACIÓN.
+                    ¡Disfruto creando experiencias para todos!.</span>
 
-                <span>Entre mis éxitos destaco que durante mi camino como programador, apoye a mis compañeros a aprender
-                    sobre diferentes lenguajes de programación. Me fascina el FrontEnd, aunque no dejo abandonado el
-                    BackEnd creo que es de vital importancia el valor de la experiencia del usuario.</span>
+                <span>Entre mis éxitos destaco que durante mi formación, apoye a mis compañeros a mejorar en diferentes
+                    lenguajes de programación. Me enfoco en el FrontEnd, aunque no dejo abandonado el
+                    BackEnd que es de vital importancia para la experiencia del usuario.</span>
 
-                <span>Cuento con experiencia desarrollando aplicaciones web, y mi sueño es crear una organización para
-                    fusionar mis dos pasiones: la programación y la arquitectura. Ayudaría a la sociedad la divulgación
-                    del diseño Arquitectónico y Urbanístico.</span>
+                <span>Cuento con experiencia desarrollando aplicaciones web, y mi sueño es crear una ecosistema para
+                    fusionar mis pasiones: la programación y la arquitectura. Ayudaría a la sociedad brindar acceso al
+                    diseño Arquitectónico y Urbanístico.</span>
 
             </div>
         </div>
@@ -117,7 +116,7 @@
     <section id="tecnologias" class="tecnologias">
         <div class="container">
             <div class="tecnologias__content">
-                <h2>Tecnoogías que Utilizo</h2>
+                <h2>TECNOLOGÍAS Y HERRAMIENTAS</h2>
                 <div class="card__container">
 
                     <div class="tecnologias__card">
@@ -178,12 +177,27 @@
     <!-- >>==> CONTACTO <==<<-->
     <section id="contacto" class="contacto">
         <div class="container">
-            <div class="contacto__content">
-                <h2>CONTACTO</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam id officia totam ad quasi obcaecati
-                    hic sint quis, sit quidem, optio maiores. Fugiat, pariatur accusantium officia soluta beatae magni.
-                    Possimus.</p>
-            </div>
+            <form action="https://formsubmit.co/hiroshiwatanabesaldivar@gmail.com" method="POST"
+                class="contacto__content">
+
+                <h2>¡Contactáme!</h2>
+                <p>Se libre de contactarme en cualquier momento. <br> ¡Me comunicare contigo tan pronto como pueda!</p>
+
+                <input type="text" name="name" id="name" placeholder="Nombre">
+
+                <input type="email" name="email" id="email" placeholder="Email">
+
+                <textarea name="message" id="message" cols="30" rows="3" placeholder="Mensaje"></textarea>
+
+                <div class="privacity">
+                    <p>Al enviar este formulario, usted acepta las politicas de privacidad</p>
+                    <button class="btn btn--primary">ENVIAR</button>
+                </div>
+
+                <input type="hidden" name="_next" value="https://portafolio-hwatanabe.netlify.app/#contacto">
+                <input type="hidden" name="_captcha" value="false">
+
+            </form>
         </div>
     </section>
 
@@ -207,18 +221,19 @@
                     </div>
                 </div>
                 <div class="footer__contact">
-                    <span class="contact__title">CONTACTAME</span>
-                    <span class="contact__content">hello@xmple.com</span>
-                    <span class="contact__content">example 666, example city 66601</span>
-                    <span class="contact__hw">{HW}dev</span>
-                    <span class="contact__content">+99 999 888 777</span>
+                    <span class="footer__title">CONTACTÁME</span>
+                    <span class="footer__text">hiroshiwatanabesaldivar@gmail.com</span>
+                    <span class="footer__text">Jr. Independencia 851, Huanuco 10001 <br> <span
+                            class="contact__hw">{HW}dev</span>
+                    </span>
+
+                    <span class="footer__text">+51 948 876 843</span>
                 </div>
                 <div class="footer__subscribe">
-                    <span class="subscribe__title">¿Quieres más?</span>
-                    <span class="subscribe__content">Ingresa tu correo si quieres unirte, recibiras un correo
-                        diario</span>
-                    <textarea placeholder=" Email" name="correo" id="" cols="1" rows="1"></textarea>
-                    <button class="btn__subscribe">AGREGAME</button>
+                    <span class="footer__title">¿Quieres más?</span>
+                    <span class="footer__text">Ingresa tu correo y recibiras un correo diario</span>
+                    <input type="email" id="email" placeholder="Email">
+                    <button class="btn btn--primary">AGREGAME</button>
 
                 </div>
 
