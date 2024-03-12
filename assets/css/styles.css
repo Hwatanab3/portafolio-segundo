@@ -334,40 +334,31 @@ textarea {
     padding-top: calc(var(--header-height) * 1.5);
     font-size: var(--normal-size);
     color: var(--text-color);
+    background: linear-gradient(to bottom, #00000034, rgb(210, 208, 203)), url("../img/fondo.jpg");
+    background-size: cover;
+    background-position: top;
 }
 
 .hero__content {
     display: flex;
 }
 
-.hero__text {
-    position: relative;
-    width: 150px;
-    left: 150px;
-    top: 95px;
-    transform: rotate(29deg) skew(20deg);
-    padding: .4em 0 .5em .7em;
-}
-
-.hero__enf {
-    color: var(--primary-color);
-}
-
 .hero h2 {
     font-weight: var(--bold-weight);
 }
 
-
 .hero__title {
+    position: relative;
     margin: 0;
     padding: 0;
     transform: rotate(-30deg) skew(20deg);
-    font-size: var(--normal-size);
+    font-size: var(--medium-size);
 
     -webkit-animation: hero__title 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation: hero__title 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
+/*>>==> EFECTO TEXTO HERO <==<< */
 @-webkit-keyframes hero__title {
     0% {
         letter-spacing: 1em;
@@ -400,7 +391,21 @@ textarea {
     }
 }
 
+.hero__text {
+    width: 150px;
+    position: relative;
+    left: 180px;
+    bottom: 320px;
+    transform: rotate(30deg) skew(-20deg);
+}
 
+.hero__enf {
+    color: var(--primary-color);
+}
+
+.hero__img img {
+    width: 300px;
+}
 
 
 .hero__content,
@@ -617,7 +622,7 @@ textarea:focus::placeholder {
 
 .footer__subscribe input {
     width: 99%;
-    font-size: var(--normal-size);
+    font-size: var(--small-size);
     border-bottom: 1px solid var(--unselect-color);
     line-height: 2;
     font-weight: var(--medium-weight);
@@ -636,8 +641,6 @@ textarea:focus::placeholder {
 .footer__subscribe input:focus::placeholder {
     color: var(--text-color);
 }
-
-
 
 .footer__copy {
     display: flex;
