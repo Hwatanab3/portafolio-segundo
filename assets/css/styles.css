@@ -331,85 +331,117 @@ textarea {
 .hero {
     width: 100%;
     height: 100vh;
-    padding-top: calc(var(--header-height) * 1.5);
+    padding-top: calc(var(--header-height) * 2.5);
     font-size: var(--normal-size);
     color: var(--text-color);
     background: linear-gradient(to bottom, #00000034, rgb(210, 208, 203)), url("../img/fondo.jpg");
     background-size: cover;
     background-position: top;
+    overflow: hidden;
 }
 
 .hero__content {
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30PX;
 }
 
 .hero h2 {
     font-weight: var(--bold-weight);
 }
 
+.hero__title__container {
+    display: flex;
+    justify-content: center;
+}
+
 .hero__title {
+    width: 300px;
     position: relative;
-    margin: 0;
-    padding: 0;
+    bottom: -10px;
+    right: 0px;
     transform: rotate(-30deg) skew(20deg);
-    font-size: var(--medium-size);
-
-    -webkit-animation: hero__title 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation: hero__title 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-/*>>==> EFECTO TEXTO HERO <==<< */
-@-webkit-keyframes hero__title {
-    0% {
-        letter-spacing: 1em;
-        opacity: 0;
-    }
-
-    40% {
-        opacity: 0.6;
-    }
-
-    100% {
-        letter-spacing: normal;
-        opacity: 1;
-    }
-}
-
-@keyframes hero__title {
-    0% {
-        letter-spacing: 1em;
-        opacity: 0;
-    }
-
-    40% {
-        opacity: 0.6;
-    }
-
-    100% {
-        letter-spacing: normal;
-        opacity: 1;
-    }
+.hero__text__container {
+    display: flex;
+    justify-content: center;
 }
 
 .hero__text {
-    width: 150px;
+    width: 130px;
     position: relative;
-    left: 180px;
-    bottom: 320px;
+    left: 100px;
+    bottom: 310px;
     transform: rotate(30deg) skew(-20deg);
+
 }
 
 .hero__enf {
     color: var(--primary-color);
 }
 
+.hero__img {
+    display: flex;
+    justify-content: center;
+}
+
 .hero__img img {
     width: 300px;
 }
 
+/*>>==> PORTAFOLIO <==<< */
+.portfolio {
+    width: 100%;
+    padding-top: calc(var(--header-height));
+}
 
-.hero__content,
-.portfolio__content,
+.portfolio__content h2 {
+    text-align: center;
+}
+
+.portfolio__content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30PX;
+    row-gap: var(--sp-1-5);
+}
+
+.portfolio__article {
+    /* padding: 1em; */
+    background-color: var(--enf-color);
+    border-radius: .5em;
+    overflow: hidden;
+}
+
+.article__container {
+    height: 200px;
+    background-image: url("../img/proyecto1.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: .5em;
+}
+
+.article__content {
+    padding: .7em;
+}
+
+.portfolio__article p {
+    font-size: var(--tiny-size);
+}
+
+.article__mentor {
+    font-weight: var(--medium-weight);
+}
+
+
+
 .sobremi__content,
 .formacion__content,
 .experiencia__content,
