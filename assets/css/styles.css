@@ -172,7 +172,22 @@ textarea {
     border-width: 2.5px;
 }
 
+.etq {
+    font-size: var(--small-size);
+    background-color: var(--unselect-color);
+    color: var(--white-color);
+    padding: 0 2em;
+    line-height: 1.7;
+    border-radius: 10px;
+}
 
+.etq--html {
+    background-color: #dd2d2d;
+}
+
+.etq--css {
+    background-color: rgb(95, 110, 242);
+}
 
 /*>>==> HEADER <==<< */
 .header {
@@ -430,6 +445,9 @@ textarea {
 
 .article__content {
     padding: .7em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
 }
 
 .portfolio__article p {
@@ -440,6 +458,10 @@ textarea {
     font-weight: var(--medium-weight);
 }
 
+.article__etq {
+    display: flex;
+    justify-content: space-evenly;
+}
 
 
 .sobremi__content,
