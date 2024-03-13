@@ -417,14 +417,13 @@ textarea {
 }
 
 .portfolio__article {
-    /* padding: 1em; */
     background-color: var(--enf-color);
     border-radius: .5em;
     overflow: hidden;
 }
 
 .article__container {
-    max-height: 250px;
+    max-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -436,7 +435,7 @@ textarea {
     width: 100%;
     height: auto;
     object-fit: cover;
-    object-position: center;
+    object-position: bottom;
 }
 
 .article__content {
@@ -459,14 +458,6 @@ textarea {
     justify-content: space-evenly;
 }
 
-
-.formacion__content,
-.experiencia__content {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 30PX;
-}
-
 /*>>==> SOBRE MI <==<< */
 
 .sobremi {
@@ -476,8 +467,8 @@ textarea {
 
 .sobremi__content {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     row-gap: 1.5em;
 }
@@ -493,6 +484,87 @@ textarea {
     object-position: center;
 }
 
+/*>>==> FORMACIÓN <==<< */
+.formacion {
+    width: 100%;
+    padding: calc(var(--header-height) * 1.25) 1.5em 1.5em 1.5em;
+}
+
+.formacion__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--sp-1-5);
+}
+
+.formacion__content h2 {
+    text-align: center;
+}
+
+.formacion__article {
+    background-color: var(--enf-color);
+    border-radius: .5em;
+    overflow: hidden;
+}
+
+
+.article__container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.formacion__article p {
+    font-size: var(--tiny-size);
+}
+
+.formacion__title {
+    font-weight: var(--medium-weight);
+}
+
+.formacion__instituto {
+    font-weight: var(--medium-weight);
+    color: var(--primary-color);
+}
+
+.formacion__year {
+    font-size: var(--small-size);
+    font-weight: var(--medium-weight);
+}
+
+.formacion__detalles {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0em;
+
+}
+
+/*>>==> EXPERIENCIA <==<< */
+.experiencia {
+    width: 100%;
+    padding: calc(var(--header-height) * 1.25) 1.5em 1.5em 1.5em;
+}
+
+.experiencia__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--sp-1-5);
+}
+
+.experiencia__content h2 {
+    text-align: center;
+}
+
+.experiencia__article {
+    background-color: var(--enf-color);
+    border-radius: .5em;
+    overflow: hidden;
+}
+
+.experiencia__article p {
+    font-size: var(--tiny-size);
+}
+
 
 /*>>==> TECNOLOGÍAS <==<< */
 .tecnologias {
@@ -504,6 +576,14 @@ textarea {
     text-align: center;
     display: flex;
     flex-direction: column;
+    row-gap: var(--sp-1-5);
+}
+
+.tecnologias__content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
 }
 
 .card__container {
