@@ -10,7 +10,12 @@ function showMenu() {
         if (event.target.closest('.nav__link')) {
             menu.classList.remove('show--menu')
         }
+
+        if (event.target.closest('.btn__darkmode')) {
+            menu.classList.remove('show--menu')
+        }
     })
+
 }
 
 export default showMenu

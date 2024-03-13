@@ -12,6 +12,8 @@
     --bg-color: hsl(356, 12%, 22%);
     --white-color: hsl(0, 0%, 100%);
     --unselect-color: hsl(0, 0%, 55%);
+    --dark-color: hsl(0, 0%, 9%);
+    --enfdark-color: hsl(0, 0%, 20%);
 
     /*>>==> FONTS USADAS <==<< */
     --body-font: 'DM Mono';
@@ -89,11 +91,22 @@ body {
     font-weight: var(--normal-weight);
     color: var(--text-color);
     background-color: var(--body-color);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+body.dark {
+    color: var(--white-color);
+    background-color: var(--dark-color);
 }
 
 a {
     text-decoration: none;
     color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark a {
+    color: var(--white-color);
 }
 
 h1,
@@ -105,6 +118,16 @@ h6 {
     font-family: var(--title-font);
     font-weight: var(--medium-weight);
     color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6 {
+    color: var(--white-color);
 }
 
 ul,
@@ -136,6 +159,13 @@ textarea {
     background-color: var(--body-color);
     user-select: none;
     color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark input,
+body.dark textarea {
+    color: var(--white-color);
+    background-color: var(--dark-color);
 }
 
 /*>>==> GLOBAL SET (UTILITY) <==<< */
@@ -214,6 +244,11 @@ textarea {
     background-color: var(--enf-color);
     box-shadow: 0 .5rem 4rem var(--unselect-color);
     z-index: var(--z-fixed);
+    transition: background-color 0.3s ease-in-out;
+}
+
+body.dark .header {
+    background-color: var(--enfdark-color);
 }
 
 .nav {
@@ -238,7 +273,13 @@ textarea {
     font-size: var(--normal-size);
     font-weight: var(--medium-weight);
     color: var(--primary-color);
+    transition: color 0.3s ease-in-out;
 }
+
+body.dark .logo a {
+    color: var(--white-color);
+}
+
 
 .logo__signo {
     color: var(--primary-color);
@@ -255,11 +296,21 @@ textarea {
     transition: 0.3s ease-in-out;
 }
 
+body.dark .btn__menu {
+    color: var(--unselect-color);
+    border-color: var(--unselect-color);
+}
+
 .btn__menu:hover {
     border: 3px solid var(--white-color);
     background-color: var(--primary-color);
     color: var(--white-color);
     transform: scale(1.2);
+}
+
+body.dark .btn__menu:hover {
+    color: var(--white-color);
+    border-color: var(--white-color);
 }
 
 .nav__menu {
@@ -269,11 +320,17 @@ textarea {
     background-color: var(--body-color);
     width: 70%;
     height: calc(100% - var(--header-height));
+    transition: background-color 0.3s ease-in-out;
+}
+
+body.dark .nav__menu {
+    background-color: var(--enfdark-color);
 }
 
 .nav__list {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
 }
 
 .nav__items {
@@ -293,6 +350,65 @@ textarea {
 .nav__items:hover {
     background-color: var(--enf-color);
     font-weight: var(--bold-weight);
+    transition: background-color 0.3s ease-in-out;
+}
+
+body.dark .nav__items:hover {
+    background-color: var(--enfdark-color);
+}
+
+/*>>==> MODO OSCURO <==<< */
+.btn__darkmode {
+    margin-right: 50px;
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 80px;
+    background-color: #eeb818;
+    border-radius: 1000px;
+    border: 1px solid var(--text-color);
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-color: var(--white-color);
+        top: 0;
+        left: unset;
+        right: 0;
+        border-radius: 100px;
+        transition: .3s ease all;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
+    }
+
+    &.active {
+        background-color: #343d5b;
+        color: var(--text-color);
+
+        &::after {
+            right: unset;
+            left: 0;
+        }
+    }
+}
+
+body.dark .btn__darkmode {
+    border-color: var(--white-color);
+}
+
+.btn__darkmode span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: var(--white-color);
 }
 
 .show--menu {
@@ -366,6 +482,10 @@ textarea {
     background-color: var(--enf-color);
     border-radius: .5em;
     overflow: hidden;
+}
+
+body.dark .portfolio__article {
+    background-color: var(--enfdark-color);
 }
 
 .article__container {
@@ -466,8 +586,12 @@ textarea {
     border-radius: .5em;
     overflow: hidden;
     max-width: 350px;
+    transition: background-color 0.3s ease-in-out;
 }
 
+body.dark .formacion__article {
+    background-color: var(--enfdark-color);
+}
 
 .article__container img {
     width: 100%;
@@ -525,6 +649,11 @@ textarea {
     background-color: var(--enf-color);
     border-radius: .5em;
     overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
+}
+
+body.dark .experiencia__article {
+    background-color: var(--enfdark-color);
 }
 
 .experiencia__article p {
@@ -570,6 +699,11 @@ textarea {
     background-color: var(--enf-color);
     padding: 10px;
     border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+body.dark .tecnologias__card {
+    background-color: var(--enfdark-color);
 }
 
 .tecnologias__card img {
@@ -630,6 +764,12 @@ textarea {
     color: var(--text-color);
     border-bottom: 2.5px solid var(--text-color);
     background-color: transparent;
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark .contacto input:focus {
+    color: var(--white-color);
+    border-bottom: 2.5px solid var(--white-color);
 }
 
 .contacto textarea {
@@ -638,12 +778,23 @@ textarea {
     font-weight: var(--medium-weight);
     resize: none;
     width: 100%;
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+body.dark .contacto textarea {
+    border-bottom: 1px solid var(--unselect-color);
 }
 
 .contacto textarea:focus {
     color: var(--text-color);
     border-bottom: 2.5px solid var(--text-color);
     background-color: transparent;
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark .contacto textarea:focus {
+    color: var(--white-color);
+    border-bottom: 2.5px solid var(--white-color);
 }
 
 .contacto input::placeholder,
@@ -651,10 +802,18 @@ textarea::placeholder {
     color: var(--unselect-color);
 }
 
-.contacto input:focus::placeholder,
-textarea:focus::placeholder {
-    color: var(--text-color);
+.contacto input:focus::placeholder {
+    color: var(--white-color);
 }
+
+.contacto textarea:focus::placeholder {
+    color: var(--white-color);
+}
+
+body.dark .input:focus::placeholder {
+    color: var(--white-color)
+}
+
 
 .contacto__img {
     width: 80%;
@@ -668,6 +827,11 @@ textarea:focus::placeholder {
     width: 100%;
     background-color: var(--enf-color);
     box-shadow: 0 .5rem 4rem var(--unselect-color);
+    transition: background-color 0.3s ease-in;
+}
+
+body.dark .footer {
+    background-color: var(--enfdark-color);
 }
 
 .footer__content {
@@ -715,6 +879,12 @@ textarea:focus::placeholder {
     background-color: var(--enf-color);
     border: 1px solid transparent;
     border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+body.dark .footer__icon a {
+    background-color: var(--enf-color);
+    color: var(--text-color);
 }
 
 .footer__icon a:hover {
@@ -759,6 +929,10 @@ textarea:focus::placeholder {
 
 .footer__subscribe input::placeholder {
     color: var(--unselect-color);
+}
+
+body.dark .footer__subscribe input::placeholder {
+    color: var(--enf-color);
 }
 
 .footer__subscribe input:focus::placeholder {
