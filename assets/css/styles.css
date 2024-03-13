@@ -148,6 +148,10 @@ textarea {
 .container {
     max-width: 1024px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2em;
 }
 
 .btn--primary {
@@ -295,62 +299,7 @@ textarea {
     left: 0%
 }
 
-/*>>==> MEDIA DEL NAV <==<< */
-@media (min-width: 992px) {
-    .header {
-        left: unset;
-    }
 
-    .btn__menu {
-        display: none;
-    }
-
-    .nav {
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: 0 .5em;
-        margin: 0;
-        align-items: center;
-        border: 1px solid red;
-    }
-
-    .nav__menu {
-        position: unset;
-        background-color: var(--body-color);
-        width: var(--header-width);
-        height: 100%;
-        display: flex;
-        align-items: center;
-        border: 1px solid blue;
-    }
-
-    .nav__list {
-        width: 100%;
-        flex-direction: column;
-        justify-content: space-around;
-        border: 1px solid yellow;
-
-    }
-
-    .nav__link {
-        width: auto;
-        line-height: 1.5;
-        font-size: var(--normal-size);
-        padding: 0;
-
-    }
-
-    .nav__link:hover a {
-        color: var(--primary-color);
-        transform: scale(0.8);
-    }
-
-    .nav__link:hover {
-        background-color: transparent;
-        font-weight: var(--bold-weight);
-    }
-
-}
 
 /*>>==> HERO <==<< */
 .hero {
@@ -404,10 +353,6 @@ textarea {
 .portfolio {
     width: 100%;
     padding: calc(var(--header-height) * 1.25) 1.5em 1.5em 1.5em;
-}
-
-.portfolio__content h2 {
-    text-align: center;
 }
 
 .portfolio__content {
@@ -465,19 +410,30 @@ textarea {
     padding: calc(var(--header-height) * 1.25) 1.5em 1.5em 1.5em;
 }
 
+
+.sobremi__title {
+    text-align: center;
+}
+
+.sobremi .container {
+    padding-top: 1.5em;
+}
+
 .sobremi__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 1.5em;
+    row-gap: 1.1em;
+
 }
 
 .sobremi__content h2 {
     text-align: center;
+    margin-bottom: .7em;
 }
 
-.sobremi__content img {
+.sobremi__img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -500,10 +456,15 @@ textarea {
     text-align: center;
 }
 
+.formacion__img {
+    width: 100%;
+}
+
 .formacion__article {
     background-color: var(--enf-color);
     border-radius: .5em;
     overflow: hidden;
+    max-width: 350px;
 }
 
 
@@ -545,6 +506,10 @@ textarea {
     padding: calc(var(--header-height) * 1.25) 1.5em 1.5em 1.5em;
 }
 
+.experiencia__img {
+    width: 100%;
+}
+
 .experiencia__content {
     display: flex;
     flex-direction: column;
@@ -579,7 +544,7 @@ textarea {
     row-gap: var(--sp-1-5);
 }
 
-.tecnologias__content img {
+.tecnologias__img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -804,5 +769,181 @@ textarea:focus::placeholder {
 
 .footer__copy span {
     font-size: var(--small-size);
+}
+
+/*>>==> MEDIA DEL NAV | TABLETAS <==<< */
+@media (min-width: 768px) {
+
+    /*>>==> HERO MEDIA <==<< */
+    .hero__content {
+        flex-direction: row;
+    }
+
+    .hero__title,
+    .hero__text {
+        font-size: var(--big-size);
+    }
+
+
+
+    .hero__img img {
+        width: 90%;
+    }
+
+    /*>>==> PORTAFOLIO MEDIA <==<< */
+    .portfolio__content h2 {
+        font-size: var(--big-size);
+    }
+
+    .portfolio__content {
+        flex-direction: row;
+        column-gap: var(--sp-1-5);
+        justify-content: space-between;
+    }
+
+    .portfolio__article {
+        min-width: 40%;
+        max-width: 47%;
+    }
+
+    /*>>==> SOBRE MI MEDIA <==<< */
+    .sobremi .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sobremi__content {
+        width: 58%;
+    }
+
+    .sobremi__img {
+        width: 40%;
+    }
+
+    /*>>==> FORMACIÓN MEDIA <==<< */
+    .formacion .container {
+        row-gap: .2em;
+    }
+
+    .formacion__content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        column-gap: var(--sp-1-5);
+    }
+
+    .formacion__img {
+        width: 50%;
+    }
+
+    /*>>==> EXPERIENCIA MEDIA <==<< */
+    .experiencia__content {
+        flex-direction: row;
+        column-gap: 1em;
+        align-items: center;
+    }
+
+    .experiencia__img {
+        width: 40%;
+    }
+
+    .experiencia__article {
+        width: 60%;
+    }
+
+    /*>>==> TECNOLOGÍAS MEDIA <==<< */
+    .tecnologias__content {
+        flex-direction: row;
+        row-gap: var(--sp-1-5);
+    }
+
+    .tecnologias__img {
+        width: 40%;
+    }
+
+    /*>>==> CONTACTO MEDIA <==<< */
+    .contacto .container {
+        flex-direction: row;
+    }
+
+    .contacto__img {
+        width: 40%;
+    }
+
+    /*>>==> FOOTER MEDIA <==<< */
+    .footer__content {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: var(--sp-1);
+        width: 85%;
+    }
+
+    .footer__redes,
+    .footer__contact,
+    .footer__subscribe {
+        max-width: 40%;
+    }
+
+    .footer__subscribe {
+        display: none;
+    }
+
+}
+
+/*>>==> MEDIA DEL NAV <==<< */
+@media (min-width: 992px) {
+    .header {
+        left: unset;
+    }
+
+    .btn__menu {
+        display: none;
+    }
+
+    .nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0 .5em;
+        margin: 0;
+        align-items: center;
+        border: 1px solid red;
+    }
+
+    .nav__menu {
+        position: unset;
+        background-color: var(--body-color);
+        width: var(--header-width);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border: 1px solid blue;
+    }
+
+    .nav__list {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        border: 1px solid yellow;
+
+    }
+
+    .nav__link {
+        width: auto;
+        line-height: 1.5;
+        font-size: var(--normal-size);
+        padding: 0;
+
+    }
+
+    .nav__link:hover a {
+        color: var(--primary-color);
+        transform: scale(0.8);
+    }
+
+    .nav__link:hover {
+        background-color: transparent;
+        font-weight: var(--bold-weight);
+    }
 
 }
