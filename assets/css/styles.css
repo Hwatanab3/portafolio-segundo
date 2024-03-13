@@ -1,7 +1,7 @@
 :root {
     /*>>==> ANCHO DEL HEADER <==<< */
     --header-height: 90px;
-    --header-width: 200px;
+    --header-width: 550px;
 
     /*>>==> COLORES <==<< */
     --primary-color: hsl(7, 100%, 56%);
@@ -146,7 +146,7 @@ textarea {
 
 .section--title,
 .container {
-    max-width: 1024px;
+    max-width: 824px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -412,7 +412,7 @@ textarea {
 }
 
 
-.sobremi__title {
+.sobremi h2 {
     text-align: center;
 }
 
@@ -695,6 +695,10 @@ textarea:focus::placeholder {
     row-gap: var(--sp-0-5);
 }
 
+.footer__firma img {
+    width: 90%;
+}
+
 .footer__icon {
     display: flex;
     align-items: center;
@@ -729,11 +733,11 @@ textarea:focus::placeholder {
 
 .contact__hw {
     font-weight: var(--medium-weight);
-    font-size: var(--small-size);
+    font-size: var(--tiny-size);
 }
 
 .footer__text {
-    font-size: var(--small-size);
+    font-size: var(--tiny-size);
 }
 
 .footer__subscribe {
@@ -742,7 +746,7 @@ textarea:focus::placeholder {
 
 .footer__subscribe input {
     width: 99%;
-    font-size: var(--small-size);
+    font-size: var(--tiny-size);
     border-bottom: 1px solid var(--unselect-color);
     line-height: 2;
     font-weight: var(--medium-weight);
@@ -892,11 +896,28 @@ textarea:focus::placeholder {
 
 }
 
-/*>>==> MEDIA DEL NAV <==<< */
-@media (min-width: 992px) {
-    .header {
-        left: unset;
+/*>>==> MEDIA COMPU <==<< */
+@media (min-width: 1360px) {
+    .container {
+        margin: 0 auto 0 578px;
     }
+
+    .header {
+        left: 0;
+        width: var(--header-width);
+        height: 100vh;
+        background-color: var(--body-color);
+    }
+
+    .nav {
+        ;
+    }
+
+    .logo {
+        height: auto;
+        justify-content: flex-end;
+    }
+
 
     .btn__menu {
         display: none;
@@ -908,25 +929,23 @@ textarea:focus::placeholder {
         padding: 0 .5em;
         margin: 0;
         align-items: center;
-        border: 1px solid red;
     }
 
     .nav__menu {
         position: unset;
+        display: flex;
+        justify-content: flex-end;
         background-color: var(--body-color);
         width: var(--header-width);
-        height: 100%;
-        display: flex;
-        align-items: center;
-        border: 1px solid blue;
+        height: auto;
+        align-items: stretch;
     }
 
     .nav__list {
-        width: 100%;
+        width: 40%;
+        height: 100%;
         flex-direction: column;
         justify-content: space-around;
-        border: 1px solid yellow;
-
     }
 
     .nav__link {
@@ -937,14 +956,34 @@ textarea:focus::placeholder {
 
     }
 
-    .nav__link:hover a {
-        color: var(--primary-color);
-        transform: scale(0.8);
+    /*>>==> HERO MEDIA <==<< */
+    .hero__content {
+        flex-wrap: wrap;
     }
 
-    .nav__link:hover {
-        background-color: transparent;
-        font-weight: var(--bold-weight);
+    .hero__title__container {
+        width: 50%;
+        min-width: 350px;
+    }
+
+    .hero__img {
+        width: 50%;
+        min-width: 300px;
+    }
+
+    .sobremi h2 {
+        width: 824px;
+        margin: 0 auto 0 578px;
+    }
+
+    /*>>==> FOOTER MEDIA <==<< */
+    .footer {
+        background-color: var(--body-color);
+        box-shadow: unset;
+    }
+
+    .footer__content {
+        column-gap: 20px;
     }
 
     .footer__redes,
