@@ -15,8 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- >>==> JS <==<<-->
-    <script src="assets/js/main.js" type="module" defer></script>
+
 
     <!-- >>==> CSS <==<<-->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -36,12 +35,12 @@
             </div>
             <nav class="nav__menu">
                 <ul class="nav__list">
-                    <li class="nav__link"><a href="#portfolio">PORTFOLIO</a></li>
-                    <li class="nav__link"><a href=" #sobremi">SOBRE MI</a></li>
-                    <li class="nav__link"><a href=" #formacion">FORMACIÓN</a></li>
-                    <li class="nav__link"><a href=" #experiencia">EXPERIENCIA</a></li>
-                    <li class="nav__link"><a href=" #tecnologias">TECNOLOGÍAS</a></li>
-                    <li class="nav__link"><a href=" #contacto">CONTACTO</a></li>
+                    <li class="nav__items"><a href="#portfolio" class="nav__link">PORTFOLIO</a></li>
+                    <li class="nav__items"><a href=" #sobremi" class="nav__link">SOBRE MI</a></li>
+                    <li class="nav__items"><a href=" #formacion" class="nav__link">FORMACIÓN</a></li>
+                    <li class="nav__items"><a href=" #experiencia" class="nav__link">EXPERIENCIA</a></li>
+                    <li class="nav__items"><a href=" #tecnologias" class="nav__link">TECNOLOGÍAS</a></li>
+                    <li class="nav__items"><a href=" #contacto" class="nav__link">CONTACTO</a></li>
                 </ul>
             </nav>
         </div>
@@ -53,13 +52,15 @@
 
             <div class="hero__content">
                 <div class="hero__title__container">
-                    <h2 class="hero__title">DESARROLLADOR <br> FRONT-END</h2>
+                    <div class="hero__text__container">
+                        <h2 class="hero__text">HOLA, soy<span class="hero__enf"> ¡HIRO!</span></h2>
+                        <h2 class="hero__title">DESARROLLADOR FRONT-END</h2>
+                    </div>
+                    <span class="etq etq--money">¡DISPONIBLE PARA TRABAJAR!</span>
+
                 </div>
                 <div class="hero__img">
                     <img src="assets/img/hero.png" alt="">
-                </div>
-                <div class="hero__text__container">
-                    <h2 class="hero__text">Hola,<br>soy<span class="hero__enf"> ¡HIRO!</span></h2>
                 </div>
 
             </div>
@@ -71,8 +72,10 @@
         <div class="container">
             <div class="portfolio__content">
                 <h2>PORTFOLIO</h2>
+
                 <article class="portfolio__article">
                     <div class="article__container">
+                        <img src="./assets/img/proyecto1.jpg" alt="Blog Anime Proyecto">
                         <a href="https://blog-project-anime.netlify.app/" target="_blank" class="btn btn--primary">BLOG
                             ANIME</a>
                     </div>
@@ -85,10 +88,35 @@
                             el
                             FRONT responda a la tematica que elegi. </p>
                         <p class="article__mentor">Mentor: Jesús Fernández Collí</p>
-                        <a href="#" class="article_repo"><i class="fa-brands fa-github"></i> GitHub - Repo</a>
+                        <a href="https://github.com/Hwatanab3/BlogAnime" class="article_repo" target="_blank"><i
+                                class="fa-brands fa-github"></i> GitHub - Repo</a>
                         <div class="article__etq">
                             <span class="etq etq--html">HTML</span>
                             <span class="etq etq--css">CSS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio__article">
+                    <div class="article__container">
+                        <img src="./assets/img/proyecto2.jpg" alt="Blog Anime Proyecto">
+                        <a href="https://blog-project-anime.netlify.app/" target="_blank"
+                            class="btn btn--primary">CARRITO </a>
+                    </div>
+                    <div class="article__content">
+                        <p>Proyecto realizado durante: "Curso de Desarrollo Web Full-Stack y Ciencias de la Computación
+                            -
+                            ACADEMLO", se exploro diferentes caracteristicas principalmente el uso Javascript para
+                            manejar la información recibida desde una API, use el material de referencia y logre
+                            adaptarlo para que reciba la data desde una FAKE STORE API y se puede mostrar los productos.
+                        </p>
+                        <p class="article__mentor">Mentor: Jesús Fernández Collí</p>
+                        <a href="https://github.com/Hwatanab3/carrito" class="article_repo" target="_blank"><i
+                                class="fa-brands fa-github"></i> GitHub - Repo</a>
+                        <div class="article__etq">
+                            <span class="etq etq--html">HTML</span>
+                            <span class="etq etq--css">CSS</span>
+                            <span class="etq etq--js">JS</span>
                         </div>
                     </div>
                 </article>
@@ -102,6 +130,8 @@
         <div class="container">
             <div class="sobremi__content">
                 <h2>SOBRE MI</h2>
+
+                <img src="./assets/img/sobremi.png" alt="Hiroshi Watanabe DEV">
                 <span>Soy Arquitecto y, después modelar y renderizar por un tiempo, me pasé al mundo de la PROGRAMACIÓN.
                     ¡Disfruto creando experiencias para todos!.</span>
 
@@ -112,7 +142,19 @@
                 <span>Cuento con experiencia desarrollando aplicaciones web, y mi sueño es crear una ecosistema para
                     fusionar mis pasiones: la programación y la arquitectura. Ayudaría a la sociedad brindar acceso al
                     diseño Arquitectónico y Urbanístico.</span>
+            </div>
 
+            <div class="footer__redes">
+                <div class="redes__container">
+                    <div class="footer__firma">
+                        <a href="#hero" class="firma__img"><img src="assets/img/firma.png" alt="{HW}DEV"></a>
+                    </div>
+                    <div class="footer__icon">
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -213,9 +255,9 @@
                 <h2>¡Contactáme!</h2>
                 <p>Se libre de contactarme en cualquier momento. <br> ¡Me comunicare contigo lo antes posible!</p>
 
-                <input type="text" name="name" id="name" placeholder="Nombre">
+                <input type="text" name="name" id="name" placeholder="Nombre" autocomplete="name">
 
-                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="email" name="email" id="email" placeholder="Email" autocomplete="email">
 
                 <textarea name="message" id="message" cols="30" rows="2" placeholder="Mensaje"></textarea>
 
@@ -264,17 +306,20 @@
                 <div class="footer__subscribe">
                     <span class="footer__title">¿Quieres más?</span>
                     <span class="footer__text">Ingresa tu correo y recibiras un correo diario</span>
-                    <input type="email" id="email" placeholder="Servicio no disponible. 😢" readonly>
+                    <input type="email" id="email" placeholder="Servicio no disponible. 😢" readonly autocomplete="off">
                     <button class="btn btn--primary">AGREGAME</button>
 
                 </div>
 
             </div>
             <div class="footer__copy">
-                <span>© 2024 {HW}DEV - Todos los derechos reservados.</span>
+                <span>Diseñado por: Hiroshi Watanabe | {HW}DEV - 2024</span>
             </div>
         </div>
     </footer>
+
+    <!-- >>==> JS <==<<-->
+    <script src="assets/js/main.js" type="module" defer></script>
 
 </body>
 

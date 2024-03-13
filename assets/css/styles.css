@@ -189,6 +189,16 @@ textarea {
     background-color: rgb(95, 110, 242);
 }
 
+.etq--money {
+    background-color: #54ac32;
+    text-align: center;
+}
+
+.etq--js {
+    background-color: rgb(231, 219, 92);
+    color: var(--text-color);
+}
+
 /*>>==> HEADER <==<< */
 .header {
     position: fixed;
@@ -262,7 +272,7 @@ textarea {
     flex-direction: column;
 }
 
-.nav__link {
+.nav__items {
     display: flex;
     justify-content: flex-end;
     width: 100%;
@@ -271,12 +281,12 @@ textarea {
     padding: .8em 1em .4em;
 }
 
-.nav__link:hover a {
+.nav__items:hover a {
     color: var(--primary-color);
     transform: scale(0.8);
 }
 
-.nav__link:hover {
+.nav__items:hover {
     background-color: var(--enf-color);
     font-weight: var(--bold-weight);
 }
@@ -346,13 +356,11 @@ textarea {
 .hero {
     width: 100%;
     height: 100vh;
-    padding-top: calc(var(--header-height) * 2.5);
+    padding: calc(var(--header-height) * 2.5) 1.5em 1.5em 1.5em;
     font-size: var(--normal-size);
-    color: var(--text-color);
-    background: linear-gradient(to bottom, #00000034, rgb(210, 208, 203)), url("../img/fondo.jpg");
+    background: linear-gradient(to bottom, #000000af, rgba(210, 208, 203, 0.118)), url("../img/fondo.jpg");
     background-size: cover;
     background-position: top;
-    overflow: hidden;
 }
 
 .hero__content {
@@ -360,38 +368,22 @@ textarea {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 20px 30PX;
+
 }
 
 .hero h2 {
     font-weight: var(--bold-weight);
+    color: var(--white-color);
 }
 
 .hero__title__container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    row-gap: var(--sp-1-5);
 }
 
 .hero__title {
-    width: 300px;
-    position: relative;
-    bottom: -10px;
-    right: 0px;
-    transform: rotate(-30deg) skew(20deg);
-}
-
-.hero__text__container {
-    display: flex;
-    justify-content: center;
-}
-
-.hero__text {
-    width: 130px;
-    position: relative;
-    left: 100px;
-    bottom: 310px;
-    transform: rotate(30deg) skew(-20deg);
-
+    font-size: var(--normal-size);
 }
 
 .hero__enf {
@@ -401,16 +393,17 @@ textarea {
 .hero__img {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .hero__img img {
-    width: 300px;
+    width: 90%;
 }
 
 /*>>==> PORTAFOLIO <==<< */
 .portfolio {
     width: 100%;
-    padding-top: calc(var(--header-height));
+    padding: calc(var(--header-height) * 1.25) 1.5em 1.5em 1.5em;
 }
 
 .portfolio__content h2 {
@@ -420,7 +413,6 @@ textarea {
 .portfolio__content {
     display: flex;
     flex-direction: column;
-    padding: 20px 30PX;
     row-gap: var(--sp-1-5);
 }
 
@@ -432,15 +424,19 @@ textarea {
 }
 
 .article__container {
-    height: 200px;
-    background-image: url("../img/proyecto1.jpg");
-    background-size: cover;
-    background-position: center;
+    max-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     padding-bottom: .5em;
+}
+
+.article__container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
 }
 
 .article__content {
@@ -464,11 +460,8 @@ textarea {
 }
 
 
-.sobremi__content,
 .formacion__content,
-.experiencia__content,
-.tecnologias__content,
-.contacto__content {
+.experiencia__content {
     display: flex;
     flex-direction: column;
     padding: 20px 30PX;
@@ -476,29 +469,49 @@ textarea {
 
 /*>>==> SOBRE MI <==<< */
 
+.sobremi {
+    width: 100%;
+    padding: calc(var(--header-height) * 1.25) 1.5em 1.5em 1.5em;
+}
+
+.sobremi__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5em;
+}
+
 .sobremi__content h2 {
     text-align: center;
-
 }
 
-.sobremi__content span {
-    padding: 10px 15px;
+.sobremi__content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
 }
-
 
 
 /*>>==> TECNOLOGÍAS <==<< */
+.tecnologias {
+    width: 100%;
+    padding: calc(var(--header-height) * 1.25) 1.5em 1.5em 1.5em;
+}
+
 .tecnologias__content {
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .card__container {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 20px;
-
 }
 
 .tecnologias__card {
@@ -513,7 +526,11 @@ textarea {
     border-radius: 10px;
 }
 
-
+.tecnologias__card img {
+    object-position: center;
+    width: 100%;
+    height: auto;
+}
 
 .tecnologias__card span {
     font-size: var(--small-size);
@@ -526,7 +543,8 @@ textarea {
 /*>>==> CONTACTO <==<< */
 
 .contacto {
-    padding-top: var(--header-height);
+    width: 100%;
+    padding: calc(var(--header-height) * 1.25) 1.5em 1.5em 1.5em;
 }
 
 .contacto .container {
@@ -538,6 +556,9 @@ textarea {
 }
 
 .contacto__content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30PX;
     row-gap: 1em;
     width: 95%;
     max-width: 400px;
@@ -599,7 +620,8 @@ textarea:focus::placeholder {
 /*>>==> FOOTER <==<< */
 .footer {
     width: 100%;
-    background-color: var(--body-color);
+    background-color: var(--enf-color);
+    box-shadow: 0 .5rem 4rem var(--unselect-color);
 }
 
 .footer__content {
@@ -626,8 +648,6 @@ textarea:focus::placeholder {
     align-items: center;
     row-gap: var(--sp-0-5);
 }
-
-/* .footer__firma {} */
 
 .footer__icon {
     display: flex;
@@ -683,7 +703,6 @@ textarea:focus::placeholder {
 }
 
 .footer__subscribe input:focus {
-    /* color: var(--text-color); */
     border-bottom: 2.5px solid var(--text-color);
     background-color: transparent;
 }
