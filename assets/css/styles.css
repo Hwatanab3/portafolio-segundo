@@ -876,7 +876,7 @@ textarea:focus::placeholder {
         flex-direction: row;
         justify-content: space-between;
         padding: var(--sp-1);
-        width: 85%;
+        width: 100%;
     }
 
     .footer__redes,
@@ -944,6 +944,16 @@ textarea:focus::placeholder {
     .nav__link:hover {
         background-color: transparent;
         font-weight: var(--bold-weight);
+    }
+
+    .footer__redes,
+    .footer__contact,
+    .footer__subscribe {
+        max-width: 35%;
+    }
+
+    .footer__subscribe {
+        display: initial;
     }
 
 }
