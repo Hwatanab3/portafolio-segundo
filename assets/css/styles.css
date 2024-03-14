@@ -226,6 +226,7 @@ body.dark textarea {
 .etq--money {
     background-color: #54ac32;
     text-align: center;
+    max-width: 400px;
 }
 
 .etq--js {
@@ -361,7 +362,7 @@ body.dark .nav__items:hover {
 /*>>==> MODO OSCURO <==<< */
 .btn__darkmode {
     margin-right: 50px;
-    margin-top: 20px;
+    margin-top: 10px;
     justify-content: space-between;
     width: 80px;
     background-color: #eeb818;
@@ -422,7 +423,7 @@ body.dark .btn__darkmode {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 2em 1.5em 0;
+    margin: .5em 1.5em 0;
     padding: 0em 1.5em;
     column-gap: 2em;
 }
@@ -501,8 +502,6 @@ body.dark .language span {
     animation: typing 4s steps(12),
         blink .5s infinite step-end alternate;
     overflow: hidden;
-
-
 }
 
 @keyframes typing {
