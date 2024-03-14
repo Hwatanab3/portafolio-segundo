@@ -339,9 +339,9 @@ body.dark .nav__menu {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    line-height: 2.3;
+    line-height: 2;
     font-size: var(--medium-size);
-    padding: .8em 1em .4em;
+    padding: .4em 1em .4em;
 }
 
 .nav__items:hover a {
@@ -448,7 +448,7 @@ body.dark .language span {
 /*>>==> HERO <==<< */
 .hero {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - var(--header-height));
     min-height: 800px;
     padding: calc(var(--header-height) * 2.5) 1.5em 1.5em 1.5em;
     font-size: var(--normal-size);
@@ -486,12 +486,12 @@ body.dark .language span {
 .hero__img {
     display: flex;
     justify-content: center;
-    width: 40%;
+    width: 60%;
 
 }
 
-.hero__img img {
-    width: 40%;
+.hero__img__img {
+    width: 100%;
 }
 
 .hero__title {
@@ -623,6 +623,7 @@ body.dark .portfolio__article {
 
 .reseñas__content {
     display: flex;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1050,10 +1051,6 @@ body.dark .footer__subscribe input::placeholder {
 @media (min-width: 768px) {
 
     /*>>==> HERO MEDIA <==<< */
-    .hero__content {
-        flex-direction: row;
-    }
-
     .hero__title,
     .hero__text {
         font-size: var(--big-size);
@@ -1062,7 +1059,7 @@ body.dark .footer__subscribe input::placeholder {
 
 
     .hero__img img {
-        width: 90%;
+        width: 910;
     }
 
     /*>>==> PORTAFOLIO MEDIA <==<< */
@@ -1261,6 +1258,7 @@ body.dark .footer__subscribe input::placeholder {
     }
 
     /*>>==> RESEÑAS MEDIA <==<< */
+
     .reseñas h2 {
         width: 824px;
         margin: 0 auto 0 578px;
