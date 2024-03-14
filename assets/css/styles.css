@@ -461,7 +461,6 @@ body.dark .language span {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
 }
 
 .hero h2 {
@@ -486,11 +485,36 @@ body.dark .language span {
 .hero__img {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 40%;
+
 }
 
 .hero__img img {
-    width: 90%;
+    width: 40%;
+}
+
+.hero__title {
+    font-size: var(--normal-size);
+    white-space: nowrap;
+    border-right: 3px solid;
+    width: 27ch;
+    animation: typing 4s steps(12),
+        blink .5s infinite step-end alternate;
+    overflow: hidden;
+
+
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
 }
 
 /*>>==> PORTAFOLIO <==<< */
@@ -1222,13 +1246,13 @@ body.dark .footer__subscribe input::placeholder {
     }
 
     .hero__title__container {
-        width: 50%;
+        width: 75%;
         min-width: 350px;
     }
 
     .hero__img {
-        width: 50%;
-        min-width: 300px;
+        width: 25%;
+        min-width: 400px;
     }
 
     /*>>==> SOBREMI MEDIA <==<< */
