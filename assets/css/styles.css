@@ -249,6 +249,7 @@ body.dark textarea {
 
 body.dark .header {
     background-color: var(--enfdark-color);
+    box-shadow: 0 .5rem 4rem hsl(0, 0%, 18%);
 }
 
 .nav {
@@ -424,7 +425,7 @@ body.dark .btn__darkmode {
     min-height: 800px;
     padding: calc(var(--header-height) * 2.5) 1.5em 1.5em 1.5em;
     font-size: var(--normal-size);
-    background: linear-gradient(to bottom, #000000af, rgba(210, 208, 203, 0.118)), url("../img/fondo.jpg");
+    background: linear-gradient(to bottom, #000000af, rgba(210, 208, 203, 0.118)), url("../img/fondo.webp");
     background-size: cover;
     background-position: top;
 }
@@ -861,6 +862,11 @@ body.dark .footer {
 
 .footer__firma img {
     width: 90%;
+
+}
+
+body.dark .footer__firma img {
+    filter: contrast(0);
 }
 
 .footer__icon {
