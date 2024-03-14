@@ -1089,10 +1089,6 @@ body.dark .footer__subscribe input::placeholder {
         background-color: var(--body-color);
     }
 
-    .nav {
-        ;
-    }
-
     .logo {
         height: auto;
         justify-content: flex-end;
@@ -1175,5 +1171,4 @@ body.dark .footer__subscribe input::placeholder {
     .footer__subscribe {
         display: initial;
     }
-
 }
