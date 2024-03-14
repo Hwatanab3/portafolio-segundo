@@ -416,6 +416,32 @@ body.dark .btn__darkmode {
     left: 0%
 }
 
+/*>>==> TRADUCIR <==<< */
+
+.language {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2em 1.5em 0;
+    padding: 0em 1.5em;
+    column-gap: 2em;
+}
+
+.language a {
+    font-size: var(--medium-size);
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+}
+
+.language a:hover {
+    color: var(--primary-color);
+    transition: color .3s ease-in-out;
+}
+
+body.dark .language span {
+    color: var(--white-color);
+}
+
 
 
 /*>>==> HERO <==<< */
@@ -547,12 +573,6 @@ body.dark .portfolio__article {
     justify-content: center;
     align-items: center;
     row-gap: 1.1em;
-
-}
-
-.sobremi__content h2 {
-    text-align: center;
-    margin-bottom: .7em;
 }
 
 .sobremi__img {
@@ -561,6 +581,67 @@ body.dark .portfolio__article {
     object-fit: cover;
     object-position: center;
 }
+
+/*>>==> RESEÑAS <==<< */
+
+.reseñas {
+    width: 100%;
+    padding: calc(var(--header-height) * 1.25) 1.5em 1.5em 1.5em;
+}
+
+
+.reseñas h2 {
+    text-align: center;
+}
+
+.reseñas .container {
+    padding-top: 1.5em;
+}
+
+.reseñas__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.1em;
+}
+
+.reseñas__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.reseñas__article {
+    background-color: var(--enf-color);
+    border-radius: .5em;
+    overflow: hidden;
+    max-width: 350px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+body.dark .reseñas__article {
+    background-color: var(--enfdark-color);
+}
+
+.reseñas__article p {
+    font-size: var(--tiny-size);
+}
+
+.reseñas__title {
+    font-weight: var(--medium-weight);
+}
+
+.reseñas__detalles {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0em;
+}
+
+
+
 
 /*>>==> FORMACIÓN <==<< */
 .formacion {
@@ -898,22 +979,8 @@ body.dark .footer__icon a {
     color: var(--white-color);
 }
 
-.footer__contact {
-    row-gap: var(--sp-0-5);
-}
-
-.footer__title {
-    font-weight: var(--medium-weight);
-    font-size: var(--normal-size);
-}
-
-.contact__hw {
-    font-weight: var(--medium-weight);
-    font-size: var(--tiny-size);
-}
-
-.footer__text {
-    font-size: var(--tiny-size);
+body.dark .footer__contact img {
+    filter: contrast(0);
 }
 
 .footer__subscribe {
@@ -1005,6 +1072,23 @@ body.dark .footer__subscribe input::placeholder {
     .sobremi__img {
         width: 40%;
     }
+
+    /*>>==> RESEÑAS <==<< */
+    .reseñas .container {
+        row-gap: .2em;
+    }
+
+    .reseñas__content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        column-gap: var(--sp-1-5);
+    }
+
+    .reseñas__img {
+        width: 50%;
+    }
+
 
     /*>>==> FORMACIÓN MEDIA <==<< */
     .formacion .container {
@@ -1147,7 +1231,14 @@ body.dark .footer__subscribe input::placeholder {
         min-width: 300px;
     }
 
+    /*>>==> SOBREMI MEDIA <==<< */
     .sobremi h2 {
+        width: 824px;
+        margin: 0 auto 0 578px;
+    }
+
+    /*>>==> RESEÑAS MEDIA <==<< */
+    .reseñas h2 {
         width: 824px;
         margin: 0 auto 0 578px;
     }
