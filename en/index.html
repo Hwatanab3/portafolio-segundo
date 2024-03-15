@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
 
     <!-- >>==> CSS <==<<-->
     <link rel="stylesheet" href="../assets/css/styles.css">
@@ -69,101 +69,390 @@
 
 
     <!-- >>==> HERO <==<<-->
-    <main id="hero" class="hero">
-        <div class="container">
+    <main>
+        <div class="section" id="hero" class="hero">
+            <div class="container">
 
-            <div class="hero__content">
-                <div class="hero__title__container">
-                    <div class="hero__text__container">
-                        <h2 class="hero__text">HI, I'm<span class="hero__enf"> ¡HIRO!</span></h2>
-                        <h2 class="hero__title">FRONT-END DEVELOPER</h2>
+                <div class="hero__content">
+                    <div class="hero__title__container">
+                        <div class="hero__text__container">
+                            <h2 class="hero__text">HI, I'm<span class="hero__enf"> ¡HIRO!</span></h2>
+                            <h2 class="hero__title">FRONT-END DEVELOPER</h2>
+                        </div>
+                        <span class="etq etq--money">AVAILABLE FOR WORK!</span>
+
                     </div>
-                    <span class="etq etq--money">AVAILABLE FOR WORK!</span>
+                    <div class="hero__img">
+                        <img src="../assets/img/hero.webp" alt="">
+                    </div>
 
                 </div>
-                <div class="hero__img">
-                    <img src="../assets/img/hero.webp" alt="">
+            </div>
+        </div>
+
+
+        <!-- >>==> PORTAFOLIO <==<<-->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2>PORTFOLIO</h2>
+                <div class="portfolio__content">
+
+
+                    <article class="portfolio__article">
+                        <div class="article__container">
+                            <img src="../assets/img/proyecto1.webp" alt="Blog Anime Proyecto">
+                            <a href="https://blog-project-anime.netlify.app/" target="_blank"
+                                class="btn btn--primary">BLOG
+                                ANIME</a>
+                        </div>
+                        <div class="article__content">
+                            <p>Project completed during: "Full-Stack Web Development and Computer Science Course -
+                                ACADEMLO". Explored various features, primarily focusing on the use of Flexbox to
+                                generate
+                                responsive static websites. Utilized reference material and customized it to ensure that
+                                the
+                                front-end aligns with the chosen theme. </p>
+                            <p class="article__mentor">Mentor: Jesús Fernández Collí</p>
+                            <a href="https://github.com/Hwatanab3/BlogAnime" class="article_repo" target="_blank"><i
+                                    class="fa-brands fa-github"></i> GitHub - Repo</a>
+                            <div class="article__etq">
+                                <span class="etq etq--html">HTML</span>
+                                <span class="etq etq--css">CSS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio__article">
+                        <div class="article__container">
+                            <img src="../assets/img/proyecto2.webp" alt="Blog Anime Proyecto">
+                            <a href="https://carrito-hw.netlify.app/" target="_blank" class="btn btn--primary">CART
+                            </a>
+                        </div>
+                        <div class="article__content">
+                            <p>Project completed during: "Full-Stack Web Development and Computer Science Course -
+                                ACADEMLO". Explored various features, primarily focusing on using JavaScript to handle
+                                information received from an API. Utilized reference material and successfully adapted
+                                it to
+                                receive data from a FAKE STORE API and display the products.
+                            </p>
+                            <p class="article__mentor">Mentor: Jesús Fernández Collí</p>
+                            <a href="https://github.com/Hwatanab3/carrito" class="article_repo" target="_blank"><i
+                                    class="fa-brands fa-github"></i> GitHub - Repo</a>
+                            <div class="article__etq">
+                                <span class="etq etq--html">HTML</span>
+                                <span class="etq etq--css">CSS</span>
+                                <span class="etq etq--js">JS</span>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
-
             </div>
-        </div>
-    </main>
+        </section>
 
-    <!-- >>==> PORTAFOLIO <==<<-->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2>PORTFOLIO</h2>
-            <div class="portfolio__content">
+        <!-- >>==> SOBRE MI <==<<-->
+        <section id="sobremi" class="sobremi">
+            <h2 class="sobremi__title">ABOUT ME</h2>
+            <div class="container">
+                <img src="../assets/img/sobremi.webp" alt="Hiroshi Watanabe DEV" class="sobremi__img">
 
-
-                <article class="portfolio__article">
-                    <div class="article__container">
-                        <img src="../assets/img/proyecto1.webp" alt="Blog Anime Proyecto">
-                        <a href="https://blog-project-anime.netlify.app/" target="_blank" class="btn btn--primary">BLOG
-                            ANIME</a>
-                    </div>
-                    <div class="article__content">
-                        <p>Project completed during: "Full-Stack Web Development and Computer Science Course -
-                            ACADEMLO". Explored various features, primarily focusing on the use of Flexbox to generate
-                            responsive static websites. Utilized reference material and customized it to ensure that the
-                            front-end aligns with the chosen theme. </p>
-                        <p class="article__mentor">Mentor: Jesús Fernández Collí</p>
-                        <a href="https://github.com/Hwatanab3/BlogAnime" class="article_repo" target="_blank"><i
-                                class="fa-brands fa-github"></i> GitHub - Repo</a>
-                        <div class="article__etq">
-                            <span class="etq etq--html">HTML</span>
-                            <span class="etq etq--css">CSS</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="portfolio__article">
-                    <div class="article__container">
-                        <img src="../assets/img/proyecto2.webp" alt="Blog Anime Proyecto">
-                        <a href="https://carrito-hw.netlify.app/" target="_blank" class="btn btn--primary">CART
-                        </a>
-                    </div>
-                    <div class="article__content">
-                        <p>Project completed during: "Full-Stack Web Development and Computer Science Course -
-                            ACADEMLO". Explored various features, primarily focusing on using JavaScript to handle
-                            information received from an API. Utilized reference material and successfully adapted it to
-                            receive data from a FAKE STORE API and display the products.
-                        </p>
-                        <p class="article__mentor">Mentor: Jesús Fernández Collí</p>
-                        <a href="https://github.com/Hwatanab3/carrito" class="article_repo" target="_blank"><i
-                                class="fa-brands fa-github"></i> GitHub - Repo</a>
-                        <div class="article__etq">
-                            <span class="etq etq--html">HTML</span>
-                            <span class="etq etq--css">CSS</span>
-                            <span class="etq etq--js">JS</span>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- >>==> SOBRE MI <==<<-->
-    <section id="sobremi" class="sobremi">
-        <h2 class="sobremi__title">ABOUT ME</h2>
-        <div class="container">
-            <img src="../assets/img/sobremi.webp" alt="Hiroshi Watanabe DEV" class="sobremi__img">
-
-            <div class="sobremi__content">
-                <span>"Front-end Developer and Architect, after modeling and rendering for a while, I transitioned to
-                    the world of PROGRAMMING. I enjoy creating experiences for everyone!"</span>
-                <span>"Among my successes, I highlight that during my training, I supported my colleagues in improving
-                    in different programming languages. I focus on FrontEnd, although I don't neglect the BackEnd, which
-                    is vital for the user experience."</span>
-                <span>"I have experience developing web applications, and my dream is to create an ecosystem to merge my
-                    passions: programming and architecture. It would help society to provide access to architectural and
-                    urban design."</span>
                 <div class="sobremi__content">
+                    <span>"Front-end Developer and Architect, after modeling and rendering for a while, I transitioned
+                        to
+                        the world of PROGRAMMING. I enjoy creating experiences for everyone!"</span>
+                    <span>"Among my successes, I highlight that during my training, I supported my colleagues in
+                        improving
+                        in different programming languages. I focus on FrontEnd, although I don't neglect the BackEnd,
+                        which
+                        is vital for the user experience."</span>
+                    <span>"I have experience developing web applications, and my dream is to create an ecosystem to
+                        merge my
+                        passions: programming and architecture. It would help society to provide access to architectural
+                        and
+                        urban design."</span>
+                    <div class="sobremi__content">
+                        <div class="footer__redes">
+                            <div class="redes__container">
+                                <div class="footer__firma">
+                                    <img src="assets/img/firma.webp" alt="{HW}DEV">
+                                </div>
+                                <div class="footer__icon">
+                                    <a href="https://www.linkedin.com/in/hirowatanabe" target="_blank"><i
+                                            class="fa-brands fa-linkedin"
+                                            aria-label="Este link te llevara a mi perfil de linkedin"></i></a>
+                                    <a href="https://github.com/Hwatanab3" target="_blank"><i
+                                            class="fa-brands fa-github"
+                                            aria-label="Este link te llevara a mi perfil de github"></i></a>
+                                    <a href="https://www.instagram.com/hwatanabe.dev/" target="_blank"><i
+                                            class="fa-brands fa-instagram"
+                                            aria-label="Este link te llevara a mi perfil de instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- >>==> RESEÑAS <==<<-->
+        <section id="reseñas" class="reseñas">
+            <h2 class="reseñas__title">REVIEW</h2>
+            <div class="container">
+                <img src="../assets/img/reseñas.png" alt="Hiroshi Watanabe reseñas" class="reseñas__img">
+                <div class="reseñas__content">
+
+
+                    <article class="reseñas__article">
+                        <div class="article__container">
+                            <img src="../assets/img/reseña1.jpg" alt="review1" class="article__img">
+                        </div>
+                        <div class="article__content">
+                            <div class="reseñas__detalles">
+                                <span class="reseñas__title">RIMURU TEMPEST</span>
+                            </div>
+                            <p>"I can't contain my excitement! I want to thank the incredible programmer who has made an
+                                amazing improvement in our digital community possible. Your work has taken our
+                                experience to
+                                the next level. Thank you for your dedication and talent!"
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="reseñas__article">
+                        <div class="article__container">
+                            <img src="../assets/img/reseña2.webp" alt="review2" class="article__img">
+                        </div>
+                        <div class="article__content">
+                            <div class="reseñas__detalles">
+                                <span class="reseñas__title">AINZ OOAL GOWN</span>
+                            </div>
+                            <p>"Incredible work, programmer! Your ability to handle code is as impressive as my
+                                transformational capacity. Thank you for your exceptional contribution to our project.
+                                You
+                                are a true digital hero in our online world!"
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="reseñas__article">
+                        <div class="article__container">
+                            <img src="../assets/img/reseña3.webp" alt="review3" class="article__img">
+                        </div>
+                        <div class="article__content">
+                            <div class="reseñas__detalles">
+                                <span class="reseñas__title">SUSUMIYA HARUHI</span>
+                            </div>
+                            <p>"Hey Hiro! Your ability to master code is simply amazing. Thank you for bringing all my
+                                crazy
+                                ideas to life and turning them into incredible projects. You're the real MVP of the
+                                team!
+                                Keep pushing boundaries and creating magic."
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="reseñas__article">
+                        <div class="article__container">
+                            <img src="../assets/img/reseña4.jpg" alt="review 4" class="article__img">
+                        </div>
+                        <div class="article__content">
+                            <div class="reseñas__detalles">
+                                <span class="reseñas__title">KURISU MAKISE</span>
+                            </div>
+                            <p>"Outstanding work, Hiro! Your technical prowess shines as bright as your lines of code.
+                                Thank
+                                you for being such a reliable and talented teammate. Together, we are creating an
+                                extraordinary future! Keep being awesome."
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- >>==> FORMACIÓN <==<<-->
+        <section id="formacion" class="formacion">
+            <div class="container">
+                <h2>FORMATION</h2>
+                <img src="../assets/img/formacion.webp" alt="HWdev estudiando" class="formacion__img">
+                <div class="formacion__content">
+
+
+
+                    <article class="formacion__article">
+                        <div class="article__container">
+                            <img src="../assets/img/academlo.png" alt="Academlo" class="article__img">
+                            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR29sePGKWhx9svJOBW-FytT-jFAEkXdV2KxAG7wiHZsGGYREnwoK-Afwlpa0b3XbW6jwA&usqp=CAU"
+                                target="_blank" class="btn btn--primary">CERTIFICATE </a>
+                        </div>
+                        <div class="article__content">
+                            <div class="formacion__detalles">
+                                <span class="formacion__title">WEB FULLSTACK</span>
+                                <span class="formacion__instituto">ACADEMLO</span>
+                                <span class="formacion__year">2024</span>
+                            </div>
+                            <p>Full-Stack Web Development and Computer Science Course; JavaScript, Html, CSS, React,
+                                API,
+                                Databases, Development, API Building, and Security
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="formacion__article">
+                        <div class="article__container">
+                            <img src="../assets/img/google.png" alt="Google activate" class="article__img">
+                            <a href="https://drive.google.com/file/d/1-D75S1ALCFFHV7u1gy-owBwnNBxHNT9y/view?usp=sharing"
+                                target="_blank" class="btn btn--primary">CERTIFICATE </a>
+                        </div>
+                        <div class="article__content">
+                            <div class="formacion__detalles">
+                                <span class="formacion__title">INTR. TO WEB DEV. I/II</span>
+                                <span class="formacion__instituto">GOOGLE ACTÍVATE</span>
+                                <span class="formacion__year">2020</span>
+                            </div>
+                            <p>"Course in Professional Web Design Introduction"
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- >>==> EXPERIENCIA <==<<-->
+        <section id="experiencia" class="experiencia">
+
+            <div class="container">
+                <h2>EXPERIENCE</h2>
+
+                <div class="experiencia__content">
+                    <img src="../assets/img/experiencia.png" alt="hwdev levantando pesas" class="experiencia__img">
+
+                    <article class="experiencia__article">
+                        <div class="article__container">
+                            <img src="../assets/img/freelance.webp" alt="Blog Anime Proyecto" class="article__img">
+                        </div>
+                        <div class="article__content">
+                            <div class="formacion__detalles">
+                                <span class="formacion__title">FREELANCE</span>
+                                <span class="formacion__instituto">FRONT-END DEVELOPER</span>
+                                <span class="formacion__year">2024</span>
+                            </div>
+                            <p>Responsible for the design, development, and maintenance of websites, as well as the
+                                development of new user-oriented features ensuring easy navigation for users.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- >>==> TECNOLOGÍAS <==<<-->
+        <section id="tecnologias" class="tecnologias">
+            <div class="container">
+                <h2>SKILLS</h2>
+                <div class="tecnologias__content">
+
+                    <img src="../assets/img/tecnologias.png" alt="Tecnologías y herramientas" class="tecnologias__img">
+                    <div class="card__container">
+
+                        <div class="tecnologias__card">
+                            <img src="../assets/img/html.png" alt="HTML5">
+                            <span>HTML</span>
+                        </div>
+
+                        <div class="tecnologias__card">
+                            <img src="../assets/img/css.png" alt="CSS3">
+                            <span>CSS</span>
+                        </div>
+
+                        <div class="tecnologias__card">
+                            <img src="../assets/img/js.png" alt="JS">
+                            <span>JAVASCRIPT</span>
+                        </div>
+
+                        <div class="tecnologias__card">
+                            <img src="../assets/img/react.png" alt="REACT JS">
+                            <span>REACT JS</span>
+                        </div>
+
+                        <div class="tecnologias__card">
+                            <img src="../assets/img/tail.png" alt="TAILWIND">
+                            <span>TAILWIND</span>
+                        </div>
+
+                        <div class="tecnologias__card">
+                            <img src="../assets/img/node.png" alt="NODE.JS">
+                            <span>NODE.JS</span>
+                        </div>
+
+                        <div class="tecnologias__card">
+                            <img src="../assets/img/npm.png" alt="NPM">
+                            <span>NPM</span>
+                        </div>
+
+                        <div class="tecnologias__card">
+                            <img src="../assets/img/git.webp" alt="GIT">
+                            <span>GIT</span>
+                        </div>
+
+                        <div class="tecnologias__card">
+                            <img src="../assets/img/github.png" alt="GITHUB">
+                            <span>GITHUB</span>
+                        </div>
+
+                        <div class="tecnologias__card">
+                            <img src="../assets/img/astro.png" alt="ASTRO">
+                            <span>ASTRO</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- >>==> CONTACTO <==<<-->
+        <section id="contacto" class="contacto">
+            <div class="container">
+
+                <form action="https://formsubmit.co/hiroshiwatanabesaldivar@gmail.com" method="POST"
+                    class="contacto__content">
+
+                    <h2>Contact me!</h2>
+                    <p>"Feel free to contact me anytime. I'll get back to you as soon as possible!"</p>
+
+                    <input type="text" name="name" id="name" placeholder="Nombre" autocomplete="name">
+
+                    <input type="email" name="email" id="email" placeholder="Email" autocomplete="email">
+
+                    <textarea name="message" id="message" cols="30" rows="2" placeholder="Mensaje"></textarea>
+
+                    <div class="privacity">
+                        <p>"By submitting this form, you agree to the privacy policies."</p>
+                        <button class="btn btn--primary">SEND</button>
+                    </div>
+
+                    <input type="hidden" name="_next" value="https://portafolio-hwatanabe.netlify.app/#contacto">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+
+                <img class="contacto__img" src="../assets/img/contacto.png" alt="Enviame un email">
+
+            </div>
+        </section>
+
+        <!-- >>==> FOOTER <==<<-->
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="footer__content">
+
                     <div class="footer__redes">
                         <div class="redes__container">
                             <div class="footer__firma">
-                                <img src="assets/img/firma.webp" alt="{HW}DEV">
+                                <a href="#hero" class="firma__img"><img src="../assets/img/firma.webp"
+                                        alt="{HW}DEV"></a>
                             </div>
                             <div class="footer__icon">
                                 <a href="https://www.linkedin.com/in/hirowatanabe" target="_blank"><i
@@ -177,295 +466,25 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- >>==> RESEÑAS <==<<-->
-    <section id="reseñas" class="reseñas">
-        <h2 class="reseñas__title">REVIEW</h2>
-        <div class="container">
-            <img src="../assets/img/reseñas.png" alt="Hiroshi Watanabe reseñas" class="reseñas__img">
-            <div class="reseñas__content">
-
-
-                <article class="reseñas__article">
-                    <div class="article__container">
-                        <img src="../assets/img/reseña1.jpg" alt="review1" class="article__img">
+                    <div class="footer__contact">
+                        <img src="../assets/img/contactame.png" alt="contacto {hw}dev">
                     </div>
-                    <div class="article__content">
-                        <div class="reseñas__detalles">
-                            <span class="reseñas__title">RIMURU TEMPEST</span>
-                        </div>
-                        <p>"I can't contain my excitement! I want to thank the incredible programmer who has made an
-                            amazing improvement in our digital community possible. Your work has taken our experience to
-                            the next level. Thank you for your dedication and talent!"
-                        </p>
-                    </div>
-                </article>
+                    <div class="footer__subscribe">
+                        <span class="footer__title">Want more? </span>
+                        <span class="footer__text">Enter your email and receive a daily newsletter.</span>
+                        <input type="email" id="email__lista" placeholder="Service not available. 😢" readonly
+                            autocomplete="off">
+                        <button class="btn btn--primary">ADD ME</button>
 
-                <article class="reseñas__article">
-                    <div class="article__container">
-                        <img src="../assets/img/reseña2.webp" alt="review2" class="article__img">
-                    </div>
-                    <div class="article__content">
-                        <div class="reseñas__detalles">
-                            <span class="reseñas__title">AINZ OOAL GOWN</span>
-                        </div>
-                        <p>"Incredible work, programmer! Your ability to handle code is as impressive as my
-                            transformational capacity. Thank you for your exceptional contribution to our project. You
-                            are a true digital hero in our online world!"
-                        </p>
-                    </div>
-                </article>
-
-                <article class="reseñas__article">
-                    <div class="article__container">
-                        <img src="../assets/img/reseña3.webp" alt="review3" class="article__img">
-                    </div>
-                    <div class="article__content">
-                        <div class="reseñas__detalles">
-                            <span class="reseñas__title">SUSUMIYA HARUHI</span>
-                        </div>
-                        <p>"Hey Hiro! Your ability to master code is simply amazing. Thank you for bringing all my crazy
-                            ideas to life and turning them into incredible projects. You're the real MVP of the team!
-                            Keep pushing boundaries and creating magic."
-                        </p>
-                    </div>
-                </article>
-
-                <article class="reseñas__article">
-                    <div class="article__container">
-                        <img src="../assets/img/reseña4.jpg" alt="review 4" class="article__img">
-                    </div>
-                    <div class="article__content">
-                        <div class="reseñas__detalles">
-                            <span class="reseñas__title">KURISU MAKISE</span>
-                        </div>
-                        <p>"Outstanding work, Hiro! Your technical prowess shines as bright as your lines of code. Thank
-                            you for being such a reliable and talented teammate. Together, we are creating an
-                            extraordinary future! Keep being awesome."
-                        </p>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- >>==> FORMACIÓN <==<<-->
-    <section id="formacion" class="formacion">
-        <div class="container">
-            <h2>FORMATION</h2>
-            <img src="../assets/img/formacion.webp" alt="HWdev estudiando" class="formacion__img">
-            <div class="formacion__content">
-
-
-
-                <article class="formacion__article">
-                    <div class="article__container">
-                        <img src="../assets/img/academlo.png" alt="Academlo" class="article__img">
-                        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR29sePGKWhx9svJOBW-FytT-jFAEkXdV2KxAG7wiHZsGGYREnwoK-Afwlpa0b3XbW6jwA&usqp=CAU"
-                            target="_blank" class="btn btn--primary">CERTIFICATE </a>
-                    </div>
-                    <div class="article__content">
-                        <div class="formacion__detalles">
-                            <span class="formacion__title">WEB FULLSTACK</span>
-                            <span class="formacion__instituto">ACADEMLO</span>
-                            <span class="formacion__year">2024</span>
-                        </div>
-                        <p>Full-Stack Web Development and Computer Science Course; JavaScript, Html, CSS, React, API,
-                            Databases, Development, API Building, and Security
-                        </p>
-                    </div>
-                </article>
-
-                <article class="formacion__article">
-                    <div class="article__container">
-                        <img src="../assets/img/google.png" alt="Google activate" class="article__img">
-                        <a href="https://drive.google.com/file/d/1-D75S1ALCFFHV7u1gy-owBwnNBxHNT9y/view?usp=sharing"
-                            target="_blank" class="btn btn--primary">CERTIFICATE </a>
-                    </div>
-                    <div class="article__content">
-                        <div class="formacion__detalles">
-                            <span class="formacion__title">INTR. TO WEB DEV. I/II</span>
-                            <span class="formacion__instituto">GOOGLE ACTÍVATE</span>
-                            <span class="formacion__year">2020</span>
-                        </div>
-                        <p>"Course in Professional Web Design Introduction"
-                        </p>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- >>==> EXPERIENCIA <==<<-->
-    <section id="experiencia" class="experiencia">
-
-        <div class="container">
-            <h2>EXPERIENCE</h2>
-
-            <div class="experiencia__content">
-                <img src="../assets/img/experiencia.png" alt="hwdev levantando pesas" class="experiencia__img">
-
-                <article class="experiencia__article">
-                    <div class="article__container">
-                        <img src="../assets/img/freelance.webp" alt="Blog Anime Proyecto" class="article__img">
-                    </div>
-                    <div class="article__content">
-                        <div class="formacion__detalles">
-                            <span class="formacion__title">FREELANCE</span>
-                            <span class="formacion__instituto">FRONT-END DEVELOPER</span>
-                            <span class="formacion__year">2024</span>
-                        </div>
-                        <p>Responsible for the design, development, and maintenance of websites, as well as the
-                            development of new user-oriented features ensuring easy navigation for users.
-                        </p>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- >>==> TECNOLOGÍAS <==<<-->
-    <section id="tecnologias" class="tecnologias">
-        <div class="container">
-            <h2>SKILLS</h2>
-            <div class="tecnologias__content">
-
-                <img src="../assets/img/tecnologias.png" alt="Tecnologías y herramientas" class="tecnologias__img">
-                <div class="card__container">
-
-                    <div class="tecnologias__card">
-                        <img src="../assets/img/html.png" alt="HTML5">
-                        <span>HTML</span>
-                    </div>
-
-                    <div class="tecnologias__card">
-                        <img src="../assets/img/css.png" alt="CSS3">
-                        <span>CSS</span>
-                    </div>
-
-                    <div class="tecnologias__card">
-                        <img src="../assets/img/js.png" alt="JS">
-                        <span>JAVASCRIPT</span>
-                    </div>
-
-                    <div class="tecnologias__card">
-                        <img src="../assets/img/react.png" alt="REACT JS">
-                        <span>REACT JS</span>
-                    </div>
-
-                    <div class="tecnologias__card">
-                        <img src="../assets/img/tail.png" alt="TAILWIND">
-                        <span>TAILWIND</span>
-                    </div>
-
-                    <div class="tecnologias__card">
-                        <img src="../assets/img/node.png" alt="NODE.JS">
-                        <span>NODE.JS</span>
-                    </div>
-
-                    <div class="tecnologias__card">
-                        <img src="../assets/img/npm.png" alt="NPM">
-                        <span>NPM</span>
-                    </div>
-
-                    <div class="tecnologias__card">
-                        <img src="../assets/img/git.webp" alt="GIT">
-                        <span>GIT</span>
-                    </div>
-
-                    <div class="tecnologias__card">
-                        <img src="../assets/img/github.png" alt="GITHUB">
-                        <span>GITHUB</span>
-                    </div>
-
-                    <div class="tecnologias__card">
-                        <img src="../assets/img/astro.png" alt="ASTRO">
-                        <span>ASTRO</span>
                     </div>
 
                 </div>
+                <div class="footer__copy">
+                    <span>Designed by: Hiroshi Watanabe | {HW}DEV - 2024</span>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- >>==> CONTACTO <==<<-->
-    <section id="contacto" class="contacto">
-        <div class="container">
-
-            <form action="https://formsubmit.co/hiroshiwatanabesaldivar@gmail.com" method="POST"
-                class="contacto__content">
-
-                <h2>Contact me!</h2>
-                <p>"Feel free to contact me anytime. I'll get back to you as soon as possible!"</p>
-
-                <input type="text" name="name" id="name" placeholder="Nombre" autocomplete="name">
-
-                <input type="email" name="email" id="email" placeholder="Email" autocomplete="email">
-
-                <textarea name="message" id="message" cols="30" rows="2" placeholder="Mensaje"></textarea>
-
-                <div class="privacity">
-                    <p>"By submitting this form, you agree to the privacy policies."</p>
-                    <button class="btn btn--primary">SEND</button>
-                </div>
-
-                <input type="hidden" name="_next" value="https://portafolio-hwatanabe.netlify.app/#contacto">
-                <input type="hidden" name="_captcha" value="false">
-            </form>
-
-            <img class="contacto__img" src="../assets/img/contacto.png" alt="Enviame un email">
-
-        </div>
-    </section>
-
-    <!-- >>==> FOOTER <==<<-->
-    <footer id="footer" class="footer">
-        <div class="container">
-            <div class="footer__content">
-
-                <div class="footer__redes">
-                    <div class="redes__container">
-                        <div class="footer__firma">
-                            <a href="#hero" class="firma__img"><img src="../assets/img/firma.webp" alt="{HW}DEV"></a>
-                        </div>
-                        <div class="footer__icon">
-                            <a href="https://www.linkedin.com/in/hirowatanabe" target="_blank"><i
-                                    class="fa-brands fa-linkedin"
-                                    aria-label="Este link te llevara a mi perfil de linkedin"></i></a>
-                            <a href="https://github.com/Hwatanab3" target="_blank"><i class="fa-brands fa-github"
-                                    aria-label="Este link te llevara a mi perfil de github"></i></a>
-                            <a href="https://www.instagram.com/hwatanabe.dev/" target="_blank"><i
-                                    class="fa-brands fa-instagram"
-                                    aria-label="Este link te llevara a mi perfil de instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__contact">
-                    <img src="../assets/img/contactame.png" alt="contacto {hw}dev">
-                </div>
-                <div class="footer__subscribe">
-                    <span class="footer__title">Want more? </span>
-                    <span class="footer__text">Enter your email and receive a daily newsletter.</span>
-                    <input type="email" id="email__lista" placeholder="Service not available. 😢" readonly
-                        autocomplete="off">
-                    <button class="btn btn--primary">ADD ME</button>
-
-                </div>
-
-            </div>
-            <div class="footer__copy">
-                <span>Designed by: Hiroshi Watanabe | {HW}DEV - 2024</span>
-            </div>
-        </div>
-    </footer>
-
+        </footer>
+    </main>
     <!-- >>==> JS <==<<-->
     <script src="../assets/js/main.js" type="module" defer async></script>
 
