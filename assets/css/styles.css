@@ -176,7 +176,6 @@ body.dark textarea {
 
 .section--title,
 .container {
-    max-width: 824px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -271,6 +270,15 @@ body.dark .header {
     line-height: 1;
     font-size: var(--medium-size);
     font-weight: var(--medium-weight);
+    height: var(--header-height);
+}
+
+.logo__img {
+    height: 90px;
+}
+
+body.dark .logo__img {
+    content: url('/assets/img/logo_dark.png');
 }
 
 .logo__dev {
@@ -282,14 +290,6 @@ body.dark .header {
 
 body.dark .logo a {
     color: var(--white-color);
-}
-
-
-.logo__signo {
-    color: var(--primary-color);
-    font-family: var(--title-font);
-    font-weight: var(--bold-weight);
-    font-size: var(--big-size);
 }
 
 .btn__menu {
@@ -449,20 +449,25 @@ body.dark .language span {
 /*>>==> HERO <==<< */
 .hero {
     width: 100%;
-    height: calc(100vh - var(--header-height));
-    min-height: 800px;
-    padding: calc(var(--header-height) * 2.5) 1.5em 1.5em 1.5em;
+    height: 100vh;
+    padding: calc(var(--header-height) + 1.5em) 1.5em 1.5em 1.5em;
     font-size: var(--normal-size);
     background: linear-gradient(to bottom, #000000af, rgba(210, 208, 203, 0.118)), url("../img/fondo.webp");
     background-size: cover;
     background-position: top;
 }
 
+.container--hero {
+    height: 100%;
+    justify-content: center;
+}
+
 .hero__content {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    gap: var(--sp-1-5);
 }
 
 .hero h2 {
@@ -473,7 +478,12 @@ body.dark .language span {
 .hero__title__container {
     display: flex;
     flex-direction: column;
-    row-gap: var(--sp-1-5);
+    width: 300px;
+    row-gap: var(--sp-1);
+}
+
+.hero__text {
+    font-size: var(--big-size);
 }
 
 .hero__title {
@@ -487,7 +497,7 @@ body.dark .language span {
 .hero__img {
     display: flex;
     justify-content: center;
-    width: 60%;
+    width: 350px;
 
 }
 
@@ -1049,7 +1059,7 @@ body.dark .footer__subscribe input::placeholder {
 }
 
 /*>>==> MEDIA DEL NAV | TABLETAS <==<< */
-@media (min-width: 768px) {
+@media (min-width: 767px) {
 
     /*>>==> HERO MEDIA <==<< */
     .hero__title,
