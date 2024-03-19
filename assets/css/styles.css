@@ -610,10 +610,39 @@ body.dark .portfolio__article {
 }
 
 .sobremi__img {
-    width: 100%;
+    width: 350px;
     height: auto;
     object-fit: cover;
     object-position: center;
+}
+
+.firma__img {
+    width: 100%;
+    object-fit: cover;
+}
+
+body.dark .firma__img {
+    content: url('/assets/img/firma_dark.png');
+}
+
+.redes__elements {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    row-gap: var(--sp-0-5);
+}
+
+.sobremi__firma {
+    width: 350px;
+    overflow: hidden;
+}
+
+.sobremi__redes {
+    width: 100%;
+    padding-top: 1em;
+    display: flex;
+    justify-content: end;
 }
 
 /*>>==> RESEÑAS <==<< */
@@ -979,10 +1008,6 @@ body.dark .footer {
 .footer__firma img {
     width: 90%;
 
-}
-
-body.dark .footer__firma img {
-    filter: contrast(0);
 }
 
 .footer__icon {
