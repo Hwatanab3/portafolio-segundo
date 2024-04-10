@@ -233,6 +233,10 @@ body.dark textarea {
     color: var(--text-color);
 }
 
+.etq--react {
+    background-color: rgb(59, 106, 207);
+}
+
 /*>>==> HEADER <==<< */
 .header {
     position: fixed;
@@ -1107,6 +1111,7 @@ body.dark .footer__subscribe input::placeholder {
         flex-direction: row;
         column-gap: var(--sp-1-5);
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .portfolio__article {
