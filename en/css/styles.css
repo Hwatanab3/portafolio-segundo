@@ -47,7 +47,7 @@
 }
 
 /*>>==> PARA COMPUTADORA <==<< */
-@media (min-width: 992px) {
+@media (min-width: 1360px) {
     :root {
         --big-size: 2.5rem;
         --medium-size: 2rem;
@@ -137,7 +137,7 @@ ol {
 
 img {
     height: 100%;
-    width: 100%;
+    width: auto;
     object-fit: cover;
     object-position: center;
 }
@@ -176,7 +176,6 @@ body.dark textarea {
 
 .section--title,
 .container {
-    max-width: 824px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -210,6 +209,7 @@ body.dark textarea {
     font-size: var(--small-size);
     background-color: var(--unselect-color);
     color: var(--white-color);
+    width: 40%;
     padding: 0 2em;
     line-height: 1.7;
     border-radius: 10px;
@@ -226,12 +226,16 @@ body.dark textarea {
 .etq--money {
     background-color: #54ac32;
     text-align: center;
-    max-width: 400px;
+    width: 100%;
 }
 
 .etq--js {
     background-color: rgb(231, 219, 92);
     color: var(--text-color);
+}
+
+.etq--react {
+    background-color: rgb(59, 106, 207);
 }
 
 /*>>==> HEADER <==<< */
@@ -268,25 +272,29 @@ body.dark .header {
 }
 
 .header__logo {
-    font-size: var(--big-size);
+    line-height: 1;
+    font-size: var(--medium-size);
+    font-weight: var(--medium-weight);
+    height: var(--header-height);
+}
+
+.logo__img {
+    height: 90px;
+}
+
+body.dark .logo a {
+    content: url('/en/assets/img/logo_dark.png')
 }
 
 .logo__dev {
     font-size: var(--normal-size);
-    font-weight: var(--medium-weight);
+    font-weight: var(--bold-weight);
     color: var(--primary-color);
     transition: color 0.3s ease-in-out;
 }
 
 body.dark .logo a {
     color: var(--white-color);
-}
-
-
-.logo__signo {
-    color: var(--primary-color);
-    font-family: var(--title-font);
-    font-size: 2.8rem;
 }
 
 .btn__menu {
@@ -339,8 +347,9 @@ body.dark .nav__menu {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    line-height: 2;
+    line-height: 1.7;
     font-size: var(--medium-size);
+    font-weight: var(--normal-weight);
     padding: .4em 1em .4em;
 }
 
@@ -420,21 +429,20 @@ body.dark .btn__darkmode {
 /*>>==> TRADUCIR <==<< */
 
 .language {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: .5em 1.5em 0;
-    padding: 0em 1.5em;
-    column-gap: 2em;
+    justify-content: flex-end;
+    padding: 0.8em 1.5em;
 }
 
-.language a {
-    font-size: var(--medium-size);
+.nav__link--language {
+    font-size: var(--big-size);
     cursor: pointer;
     transition: color .3s ease-in-out;
 }
 
-.language a:hover {
+.nav__link--language:hover {
     color: var(--primary-color);
     transition: color .3s ease-in-out;
 }
@@ -443,13 +451,10 @@ body.dark .language span {
     color: var(--white-color);
 }
 
-
-
 /*>>==> HERO <==<< */
 .hero {
     width: 100%;
-    height: calc(100vh - var(--header-height));
-    min-height: 800px;
+    height: 100vh;
     padding: calc(var(--header-height) * 2.5) 1.5em 1.5em 1.5em;
     font-size: var(--normal-size);
     background: linear-gradient(to bottom, #000000af, rgba(210, 208, 203, 0.118)), url("../assets/img/fondo.webp");
@@ -457,11 +462,18 @@ body.dark .language span {
     background-position: top;
 }
 
+.container--hero {
+    height: 100%;
+    justify-content: center;
+}
+
 .hero__content {
     display: flex;
+    max-width: 700px;
     justify-content: center;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    gap: var(--sp-1-5);
 }
 
 .hero h2 {
@@ -472,7 +484,12 @@ body.dark .language span {
 .hero__title__container {
     display: flex;
     flex-direction: column;
-    row-gap: var(--sp-1-5);
+    width: 300px;
+    row-gap: var(--sp-1);
+}
+
+.hero__text {
+    font-size: var(--big-size);
 }
 
 .hero__title {
@@ -486,7 +503,7 @@ body.dark .language span {
 .hero__img {
     display: flex;
     justify-content: center;
-    width: 60%;
+    width: 350px;
 
 }
 
@@ -572,6 +589,8 @@ body.dark .portfolio__article {
 .article__etq {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 /*>>==> SOBRE MI <==<< */
@@ -599,10 +618,39 @@ body.dark .portfolio__article {
 }
 
 .sobremi__img {
-    width: 100%;
+    width: 350px;
     height: auto;
     object-fit: cover;
     object-position: center;
+}
+
+.firma__img {
+    width: 100%;
+    object-fit: cover;
+}
+
+body.dark .firma__img {
+    content: url('/assets/img/firma_dark.png');
+}
+
+.redes__elements {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    row-gap: var(--sp-0-5);
+}
+
+.sobremi__firma {
+    width: 350px;
+    overflow: hidden;
+}
+
+.sobremi__redes {
+    width: 100%;
+    padding-top: 1em;
+    display: flex;
+    justify-content: end;
 }
 
 /*>>==> RESEÑAS <==<< */
@@ -664,10 +712,8 @@ body.dark .reseñas__article {
     row-gap: 0em;
 }
 
-
-
-
 /*>>==> FORMACIÓN <==<< */
+
 .formacion {
     width: 100%;
     padding: calc(var(--header-height) * 1.25) 1.5em 1.5em 1.5em;
@@ -728,7 +774,6 @@ body.dark .formacion__article {
     display: flex;
     flex-direction: column;
     row-gap: 0em;
-
 }
 
 /*>>==> EXPERIENCIA <==<< */
@@ -970,10 +1015,6 @@ body.dark .footer {
 
 }
 
-body.dark .footer__firma img {
-    filter: contrast(0);
-}
-
 .footer__icon {
     display: flex;
     align-items: center;
@@ -1048,15 +1089,13 @@ body.dark .footer__subscribe input::placeholder {
 }
 
 /*>>==> MEDIA DEL NAV | TABLETAS <==<< */
-@media (min-width: 768px) {
+@media (min-width: 767px) {
 
     /*>>==> HERO MEDIA <==<< */
-    .hero__title,
+    /* .hero__title,
     .hero__text {
         font-size: var(--big-size);
-    }
-
-
+    } */
 
     .hero__img img {
         width: 910;
@@ -1071,6 +1110,7 @@ body.dark .footer__subscribe input::placeholder {
         flex-direction: row;
         column-gap: var(--sp-1-5);
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .portfolio__article {

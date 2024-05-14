@@ -30,9 +30,8 @@
             <div class="logo">
                 <button type="button" class="btn btn__menu"><i class="fa-solid fa-power-off"
                         aria-label="Este boton te permite abrir el menu de navegación"></i></button>
-                <a href="#hero" class="header__logo">
-                    <span class="logo__signo">{</span>HW<span class="logo__signo">}</span><span
-                        class="logo__dev">DEV</span>
+                <a href="#hero" class="header__logo"><img class="logo__img" src="/assets/img/logo.png"
+                        alt="Logo personal HW">
                 </a>
 
             </div>
@@ -45,6 +44,9 @@
                     <li class="nav__items"><a href=" #experiencia" class="nav__link">EXPERIENCE</a></li>
                     <li class="nav__items"><a href=" #tecnologias" class="nav__link">SKILLS</a></li>
                     <li class="nav__items"><a href=" #contacto" class="nav__link">CONTACT</a></li>
+                    <li class="nav__items"><a
+                            href="https://drive.google.com/file/d/18jBXBeL48080xRdOm5iRELBxjzP0D9T2/view?usp=sharing"
+                            target="_blank" class="nav__link">CURRICULUM</a></li>
                     <li><button class="btn__darkmode" id="darkmode"
                             aria-label="Este boton te permite pasar al modo oscuro">
                             <span><i class="fa-solid fa-sun"></i></span>
@@ -53,14 +55,8 @@
                     </li>
 
                     <li>
-                        <div id="language" class="language">
-                            <div class="language__item" data-language="es">
-                                <a href="../index.html"><i class="fa-solid fa-earth-americas"></i></a>
-                            </div>
-                            <div class="language__item" data-language="en">
-                                <a href="#"><i class="fa-solid fa-flag-usa"></i></a>
-                            </div>
-                        </div>
+                    <li class="language"><a href="../index.html" class="nav__link nav__link--language"
+                            data-language="en"><i class="fa-solid fa-language"></i></a>
                     </li>
                 </ul>
             </nav>
@@ -71,7 +67,7 @@
     <!-- >>==> HERO <==<<-->
     <main>
         <section id="hero" class="hero">
-            <div class="container">
+            <div class="container container--hero">
 
                 <div class="hero__content">
                     <div class="hero__title__container">
@@ -83,7 +79,7 @@
 
                     </div>
                     <div class="hero__img">
-                        <img src="../assets/img/hero.webp" alt="">
+                        <img src="./assets/img/hero.png" alt="">
                     </div>
 
                 </div>
@@ -97,6 +93,64 @@
                 <h2>PORTFOLIO</h2>
                 <div class="portfolio__content">
 
+                    <article class="portfolio__article">
+                        <div class="article__container">
+                            <img src="./assets/img/proyecto4.png" alt="Weather App">
+                            <a href="https://pokeapp-hw.netlify.app/" target="_blank" class="btn btn--primary">POKE APP
+                                APP
+                            </a>
+                        </div>
+                        <div class="article__content">
+                            <p>Project carried out during: "Full-Stack Web Development and Information Sciences Course
+                                computing
+                                -
+                                ACADEMLO"; The project is a web application that allows us to view the information
+                                consuming the POKEMON API, this practice also uses different libraries to
+                                emulate different routes, allows you to review a group of pokemons, which can be
+                                filtered
+                                by different parameters depending on the user's need; I could also
+                                experiment with multimedia content, CRUD verbs and different applications
+                                advanced css.
+                            </p>
+                            <p class="article__mentor">Mentor: Wilber Millán</p>
+                            <a href="https://github.com/Hwatanab3/pokeapp" class="article_repo" target="_blank"><i
+                                    class="fa-brands fa-github"></i> GitHub - Repo</a>
+                            <div class="article__etq">
+                                <span class="etq etq--html">HTML</span>
+                                <span class="etq etq--css">CSS</span>
+                                <span class="etq etq--js">JS</span>
+                                <span class="etq etq--react">Reactjs</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio__article">
+                        <div class="article__container">
+                            <img src="./assets/img/proyecto3.png" alt="Weather App">
+                            <a href="https://weather-hw.netlify.app/" target="_blank" class="btn btn--primary">WEATHER
+                                APP
+                            </a>
+                        </div>
+                        <div class="article__content">
+                            <p>Project carried out during: "Full-Stack Web Development and Information Sciences Course
+                                computing - ACADEMLO", uses different features of Reactjs, such as the use of Hooks,
+                                consumption of API's, error handling modularization, it is also a reinforcement of the
+                                knowledge of different features mainly use Javascript for handle the information
+                                received from an API, use the reference material and achieve adapt it so that it
+                                receives the data from two different API's, managing it using services and an AJAX tool
+                                to display the required information.
+                            </p>
+                            <p class="article__mentor">Mentor: Wilber Millán</p>
+                            <a href="https://github.com/Hwatanab3/app-weather" class="article_repo" target="_blank"><i
+                                    class="fa-brands fa-github"></i> GitHub - Repo</a>
+                            <div class="article__etq">
+                                <span class="etq etq--html">HTML</span>
+                                <span class="etq etq--css">CSS</span>
+                                <span class="etq etq--js">JS</span>
+                                <span class="etq etq--react">Reactjs</span>
+                            </div>
+                        </div>
+                    </article>
 
                     <article class="portfolio__article">
                         <div class="article__container">
@@ -451,8 +505,7 @@
                     <div class="footer__redes">
                         <div class="redes__container">
                             <div class="footer__firma">
-                                <a href="#hero" class="firma__img"><img src="../assets/img/firma.webp"
-                                        alt="{HW}DEV"></a>
+                                <a href="#hero" class="firma__img"><img src="./assets/img/firma.webp" alt="{HW}DEV"></a>
                             </div>
                             <div class="footer__icon">
                                 <a href="https://www.linkedin.com/in/hirowatanabe" target="_blank"><i

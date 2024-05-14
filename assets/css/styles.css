@@ -47,7 +47,7 @@
 }
 
 /*>>==> PARA COMPUTADORA <==<< */
-@media (min-width: 992px) {
+@media (min-width: 1360px) {
     :root {
         --big-size: 2.5rem;
         --medium-size: 2rem;
@@ -209,6 +209,7 @@ body.dark textarea {
     font-size: var(--small-size);
     background-color: var(--unselect-color);
     color: var(--white-color);
+    width: 40%;
     padding: 0 2em;
     line-height: 1.7;
     border-radius: 10px;
@@ -225,7 +226,7 @@ body.dark textarea {
 .etq--money {
     background-color: #54ac32;
     text-align: center;
-    max-width: 400px;
+    width: 100%;
 }
 
 .etq--js {
@@ -468,6 +469,7 @@ body.dark .language span {
 
 .hero__content {
     display: flex;
+    max-width: 700px;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
@@ -587,6 +589,8 @@ body.dark .portfolio__article {
 .article__etq {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 /*>>==> SOBRE MI <==<< */
@@ -708,10 +712,8 @@ body.dark .reseñas__article {
     row-gap: 0em;
 }
 
-
-
-
 /*>>==> FORMACIÓN <==<< */
+
 .formacion {
     width: 100%;
     padding: calc(var(--header-height) * 1.25) 1.5em 1.5em 1.5em;
@@ -772,7 +774,6 @@ body.dark .formacion__article {
     display: flex;
     flex-direction: column;
     row-gap: 0em;
-
 }
 
 /*>>==> EXPERIENCIA <==<< */
@@ -1091,12 +1092,10 @@ body.dark .footer__subscribe input::placeholder {
 @media (min-width: 767px) {
 
     /*>>==> HERO MEDIA <==<< */
-    .hero__title,
+    /* .hero__title,
     .hero__text {
         font-size: var(--big-size);
-    }
-
-
+    } */
 
     .hero__img img {
         width: 910;
